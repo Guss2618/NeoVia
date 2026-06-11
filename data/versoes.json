@@ -1,0 +1,54 @@
+[
+  {
+    "versao": "MVP v0.0.1",
+    "data": "2026-06-11",
+    "alteracoes": [
+      "Criada a primeira tela de carregamento web estatica com fundo azul escuro, card central e icone de onibus."
+    ]
+  },
+  {
+    "versao": "MVP v0.0.2",
+    "data": "2026-06-11",
+    "alteracoes": [
+      "Criada uma base Expo temporaria para testes no Expo Go.",
+      "Corrigido carregamento inicial do Expo Go durante a validacao mobile."
+    ]
+  },
+  {
+    "versao": "MVP v0.0.3",
+    "data": "2026-06-11",
+    "alteracoes": [
+      "Projeto recriado com React, Next.js, Tailwind CSS e Lucide React.",
+      "Adicionada tela inicial mobile-first com indicador de versao clicavel.",
+      "Adicionada API Route para leitura do historico de versoes a partir de JSON local."
+    ]
+  },
+  {
+    "versao": "MVP v0.0.4",
+    "data": "2026-06-11",
+    "alteracoes": [
+      "Removido o componente de tela de carregamento da tela inicial.",
+      "Adicionado botao Começar levando para a pagina inicial da plataforma.",
+      "Criadas paginas iniciais dos modulos Horarios, Recarga e Rotas."
+    ]
+  },
+  {
+    "versao": "MVP v0.0.5",
+    "data": "2026-06-11",
+    "alteracoes": [
+      "Pagina inicial da plataforma reformulada com estrutura mobile-first.",
+      "Adicionado campo Escolha sua rota com icone de lupa no topo.",
+      "Adicionados dois cards de rotas favoritas e card de saldo restante no passe.",
+      "Adicionado menu inferior fixo com as opcoes Inicio, Cartao, Horarios e Rotas."
+    ]
+  },
+  {
+    "versao": "MVP v0.0.6",
+    "data": "2026-06-11",
+    "alteracoes": [
+      "Menu inferior movido para componente compartilhado.",
+      "Menu inferior fixo adicionado ao layout global para aparecer em todas as paginas.",
+      "Ajustado espacamento inferior das paginas para evitar sobreposicao do menu."
+    ]
+  }
+]
