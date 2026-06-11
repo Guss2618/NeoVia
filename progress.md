@@ -36,3 +36,12 @@
 - Menu inferior adicionado ao `app/layout.tsx` para ficar presente em todas as paginas.
 - Removida a duplicacao do menu em `/inicio`.
 - Ajustado padding inferior das paginas para evitar que o menu fixo cubra o conteudo.
+- Iniciada a reducao dos cards de rotas favoritas para 100px de altura.
+- Cards de rotas favoritas reduzidos para 100px com layout horizontal compacto e todas as informacoes preservadas.
+- Build de producao validado com `npm run build`.
+- Iniciada a compactacao do card de saldo para reduzir aproximadamente 50px de altura.
+- Card de saldo compactado com reducao aproximada de 50px, preservando todas as informacoes.
+- Build de producao validado com `npm run build` apos a compactacao do card de saldo.
+- Iniciada a compactacao da tela `/inicio` para exibir busca, rotas favoritas e cartao sem rolagem em telas com 667px de altura.
+- Tela `/inicio` compactada para o alvo de 667px, com cards de rotas favoritas reduzidos para 72px e espacamentos verticais ajustados.
+- Build de producao validado com `npm run build` apos a compactacao da tela `/inicio`.
