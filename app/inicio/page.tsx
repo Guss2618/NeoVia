@@ -48,17 +48,9 @@ export default function InicioPage() {
         </label>
 
         <section className="mt-4">
-          <div className="flex items-center justify-between gap-3">
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
-                Rotas favoritas
-              </p>
-              <h2 className="text-xl font-black leading-5 tracking-[-0.06em]">
-                Acesso rapido
-              </h2>
-            </div>
-            <BusFront className="text-brand-primary" size={24} />
-          </div>
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
+            Rotas favoritas
+          </p>
 
           <div className="mt-2 grid gap-2">
             {favoriteRoutes.map((route) => (
@@ -90,7 +82,11 @@ export default function InicioPage() {
           </div>
         </section>
 
-        <section className="mt-3 rounded-[26px] bg-brand-primary p-4 text-white shadow-card">
+        <p className="mt-3 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
+          Cartão
+        </p>
+
+        <section className="mt-2 rounded-[26px] bg-brand-primary p-4 text-white shadow-card">
           <div className="flex items-center justify-between gap-4">
             <div className="grid size-11 place-items-center rounded-xl bg-white text-brand-primary">
               <CreditCard size={24} />

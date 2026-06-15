@@ -45,3 +45,9 @@
 - Iniciada a compactacao da tela `/inicio` para exibir busca, rotas favoritas e cartao sem rolagem em telas com 667px de altura.
 - Tela `/inicio` compactada para o alvo de 667px, com cards de rotas favoritas reduzidos para 72px e espacamentos verticais ajustados.
 - Build de producao validado com `npm run build` apos a compactacao da tela `/inicio`.
+- Iniciada a criacao e troca para a branch `gabriel`.
+- Branch `gabriel` criada e ativada.
+- Iniciada a simplificacao dos titulos das secoes de rotas favoritas e cartao na tela `/inicio`.
+- Removidos o texto `Acesso rapido` e o icone de onibus do cabecalho de rotas favoritas.
+- Adicionado o titulo `Cartao` acima do card de saldo com a mesma formatacao de `Rotas favoritas`.
+- Build de producao validado com `npm run build` apos a simplificacao dos titulos da tela `/inicio`.
