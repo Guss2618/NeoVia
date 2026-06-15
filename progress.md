@@ -51,3 +51,7 @@
 - Removidos o texto `Acesso rapido` e o icone de onibus do cabecalho de rotas favoritas.
 - Adicionado o titulo `Cartao` acima do card de saldo com a mesma formatacao de `Rotas favoritas`.
 - Build de producao validado com `npm run build` apos a simplificacao dos titulos da tela `/inicio`.
+- Iniciada a reformulacao da pagina de cartao com saldo, recarga, extrato e informacoes do usuario.
+- Pagina de cartao reformulada com replica visual do passe no topo, botao de recarga em destaque, opcao de gerar extrato, dados do cartao e movimentacoes recentes.
+- Versao do sistema atualizada para MVP v0.0.7.
+- Build de producao validado com `npm run build` apos a reformulacao da pagina de cartao.

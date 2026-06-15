@@ -50,5 +50,14 @@
       "Menu inferior fixo adicionado ao layout global para aparecer em todas as paginas.",
       "Ajustado espacamento inferior das paginas para evitar sobreposicao do menu."
     ]
+  },
+  {
+    "versao": "MVP v0.0.7",
+    "data": "2026-06-15",
+    "alteracoes": [
+      "Pagina de cartao reformulada com replica visual do passe e saldo no topo.",
+      "Adicionados botao de recarga em destaque, opcao de gerar extrato e dados do cartao.",
+      "Adicionado resumo de movimentacoes recentes."
+    ]
   }
 ]
