@@ -95,3 +95,12 @@
 - Versao do sistema atualizada para MVP v0.0.11 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
 - Build de producao validado com `npm run build` apos a adicao do cabecalho compartilhado.
 - Rotas locais `/inicio` e `/recarga` validadas com status 200 e HTML contendo o menu superior atualizado.
+
+## MVP v0.0.12
+
+- Iniciada a troca do texto de ultima atualizacao no card de cartao da tela inicial por um botao de recarga.
+- Texto de ultima atualizacao no card de cartao da tela inicial substituido por botao `Recarregar cartão`.
+- Botao `Recarregar cartão` configurado como link para `/recarga`.
+- Versao do sistema atualizada para MVP v0.0.12 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
+- Build de producao validado com `npm run build` apos a troca no card de cartao.
+- Rota local `/inicio` validada com status 200 e HTML contendo o novo botao de recarga.

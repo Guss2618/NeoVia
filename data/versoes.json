@@ -95,5 +95,13 @@
       "Distancia entre o menu superior e o input Escolha sua rota aumentada na tela inicial.",
       "Cabecalho superior extraido para componente reutilizavel."
     ]
+  },
+  {
+    "versao": "MVP v0.0.12",
+    "data": "2026-06-16",
+    "alteracoes": [
+      "Texto de ultima atualizacao no card de cartao da tela inicial substituido por botao Recarregar cartao.",
+      "Botao Recarregar cartao da tela inicial passa a levar para a pagina de cartao."
+    ]
   }
 ]

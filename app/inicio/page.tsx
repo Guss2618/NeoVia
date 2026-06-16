@@ -1,4 +1,5 @@
-import { CalendarClock, BusFront, CreditCard, Search } from "lucide-react";
+import { BusFront, CreditCard, Plus, Search } from "lucide-react";
+import Link from "next/link";
 import { AppTopBar } from "../../components/AppTopBar";
 
 const favoriteRoutes = [
@@ -20,7 +21,7 @@ export default function InicioPage() {
   return (
     <main className="min-h-screen bg-[#f4f8fc] px-5 pb-24 text-slate-950">
       <section className="mx-auto w-full max-w-md">
-        <AppTopBar className="-mx-5" version="MVP v0.0.11" />
+        <AppTopBar className="-mx-5" version="MVP v0.0.12" />
 
         <label className="mt-6 flex h-12 items-center gap-3 rounded-[20px] border border-slate-200 bg-white px-4 shadow-sm focus-within:ring-2 focus-within:ring-brand-primary/25">
           <Search className="text-brand-primary" size={20} />
@@ -85,10 +86,13 @@ export default function InicioPage() {
           <strong className="block text-4xl font-black tracking-[-0.08em]">
             R$ 42,80
           </strong>
-          <div className="mt-3 flex items-center gap-2 rounded-2xl bg-white/10 px-3 py-2 text-sm font-bold text-white/80">
-            <CalendarClock size={16} />
-            Ultima atualizacao hoje, 10:15
-          </div>
+          <Link
+            href="/recarga"
+            className="mt-3 flex h-10 items-center justify-center gap-2 rounded-2xl bg-white px-3 py-2 text-sm font-black text-brand-primary shadow-sm transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/70"
+          >
+            <Plus size={17} strokeWidth={3} />
+            Recarregar cartão
+          </Link>
         </section>
       </section>
 
