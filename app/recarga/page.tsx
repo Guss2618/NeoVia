@@ -11,6 +11,7 @@ import {
   UserRound,
 } from "lucide-react";
 import Link from "next/link";
+import { AppTopBar } from "../../components/AppTopBar";
 
 const recentTransactions = [
   {
@@ -35,9 +36,14 @@ const recentTransactions = [
 
 export default function RecargaPage() {
   return (
-    <main className="min-h-screen bg-[#f4f8fc] px-5 pb-28 pt-4 text-slate-950 sm:px-8 sm:pt-6">
+    <main className="min-h-screen bg-[#f4f8fc] px-5 pb-28 text-slate-950 sm:px-8">
       <section className="mx-auto w-full max-w-4xl">
-        <header className="flex items-center gap-4">
+        <AppTopBar
+          className="-mx-5 sm:-mx-8 sm:px-8"
+          version="MVP v0.0.11"
+        />
+
+        <header className="mt-5 flex items-center gap-4">
           <Link
             href="/inicio"
             aria-label="Voltar para o início"

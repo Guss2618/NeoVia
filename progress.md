@@ -85,3 +85,13 @@
 - Versao do sistema atualizada para MVP v0.0.10 em `agents.md`, tela inicial e historico de versoes.
 - Build de producao validado com `npm run build` apos o reposicionamento da versao no cabecalho.
 - Rota local `/inicio` validada com status 200 e HTML contendo a ordem logo, versao e icones.
+
+## MVP v0.0.11
+
+- Iniciada a adicao do menu superior compartilhado na pagina de cartao e o aumento do espacamento ate o input de rota.
+- Cabecalho superior extraido para `components/AppTopBar.tsx`.
+- Menu superior compartilhado adicionado a pagina de cartao.
+- Distancia entre o menu superior e o input `Escolha sua rota` aumentada na tela inicial.
+- Versao do sistema atualizada para MVP v0.0.11 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
+- Build de producao validado com `npm run build` apos a adicao do cabecalho compartilhado.
+- Rotas locais `/inicio` e `/recarga` validadas com status 200 e HTML contendo o menu superior atualizado.

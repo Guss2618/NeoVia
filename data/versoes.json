@@ -86,5 +86,14 @@
       "Texto de versao MVP reposicionado no centro do menu superior, entre a logo e os icones de notificacoes e perfil.",
       "Layout do cabecalho ajustado para manter os tres grupos alinhados na mesma linha."
     ]
+  },
+  {
+    "versao": "MVP v0.0.11",
+    "data": "2026-06-16",
+    "alteracoes": [
+      "Menu superior compartilhado adicionado tambem a pagina de cartao.",
+      "Distancia entre o menu superior e o input Escolha sua rota aumentada na tela inicial.",
+      "Cabecalho superior extraido para componente reutilizavel."
+    ]
   }
 ]

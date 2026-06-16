@@ -1,12 +1,5 @@
-import {
-  Bell,
-  CalendarClock,
-  BusFront,
-  CreditCard,
-  Search,
-  UserRound,
-} from "lucide-react";
-import Link from "next/link";
+import { CalendarClock, BusFront, CreditCard, Search } from "lucide-react";
+import { AppTopBar } from "../../components/AppTopBar";
 
 const favoriteRoutes = [
   {
@@ -27,46 +20,9 @@ export default function InicioPage() {
   return (
     <main className="min-h-screen bg-[#f4f8fc] px-5 pb-24 text-slate-950">
       <section className="mx-auto w-full max-w-md">
-        <header className="-mx-5 flex items-center justify-between gap-3 border-b border-slate-200 bg-white px-5 py-3 shadow-sm">
-          <button
-            type="button"
-            aria-label="NeoVIa"
-            className="flex min-w-0 items-center gap-2.5 rounded-2xl text-left focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
-          >
-            <span className="grid size-10 shrink-0 place-items-center rounded-2xl bg-brand-primary text-white shadow-sm">
-              <BusFront size={22} strokeWidth={2.5} />
-            </span>
-            <span className="truncate text-xl font-black tracking-[-0.05em] text-brand-dark">
-              NeoVIa
-            </span>
-          </button>
+        <AppTopBar className="-mx-5" version="MVP v0.0.11" />
 
-          <Link
-            href="/versoes"
-            className="shrink-0 text-[11px] font-semibold text-slate-300 transition hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-300/40"
-          >
-            MVP v0.0.10
-          </Link>
-
-          <div className="flex shrink-0 items-center gap-2">
-            <button
-              type="button"
-              aria-label="Notificacoes"
-              className="grid size-10 place-items-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200 hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
-            >
-              <Bell size={19} />
-            </button>
-            <button
-              type="button"
-              aria-label="Perfil"
-              className="grid size-10 place-items-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200 hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
-            >
-              <UserRound size={19} />
-            </button>
-          </div>
-        </header>
-
-        <label className="mt-3 flex h-12 items-center gap-3 rounded-[20px] border border-slate-200 bg-white px-4 shadow-sm focus-within:ring-2 focus-within:ring-brand-primary/25">
+        <label className="mt-6 flex h-12 items-center gap-3 rounded-[20px] border border-slate-200 bg-white px-4 shadow-sm focus-within:ring-2 focus-within:ring-brand-primary/25">
           <Search className="text-brand-primary" size={20} />
           <input
             type="search"
