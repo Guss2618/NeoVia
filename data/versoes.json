@@ -103,5 +103,12 @@
       "Texto de ultima atualizacao no card de cartao da tela inicial substituido por botao Recarregar cartao.",
       "Botao Recarregar cartao da tela inicial passa a levar para a pagina de cartao."
     ]
+  },
+  {
+    "versao": "MVP v0.0.13",
+    "data": "2026-06-16",
+    "alteracoes": [
+      "Botao Recarregar cartao no card da tela inicial ajustado com o mesmo fundo e cor de texto do indicador de ultima atualizacao da pagina de cartao."
+    ]
   }
 ]

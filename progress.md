@@ -104,3 +104,11 @@
 - Versao do sistema atualizada para MVP v0.0.12 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
 - Build de producao validado com `npm run build` apos a troca no card de cartao.
 - Rota local `/inicio` validada com status 200 e HTML contendo o novo botao de recarga.
+
+## MVP v0.0.13
+
+- Iniciada a harmonizacao das cores do botao `Recarregar cartão` na tela inicial com o indicador de ultima atualizacao da pagina de cartao.
+- Botao `Recarregar cartão` no card da tela inicial atualizado para `bg-white/10` e `text-white/80`, acompanhando o indicador de ultima atualizacao da pagina de cartao.
+- Versao do sistema atualizada para MVP v0.0.13 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
+- Build de producao validado com `npm run build` apos a harmonizacao visual do botao.
+- Rota local `/inicio` validada com status 200 e HTML contendo as novas classes do botao de recarga.
