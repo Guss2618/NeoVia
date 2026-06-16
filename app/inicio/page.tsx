@@ -1,8 +1,10 @@
 import {
+  Bell,
   CalendarClock,
   BusFront,
   CreditCard,
   Search,
+  UserRound,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -25,17 +27,44 @@ export default function InicioPage() {
   return (
     <main className="min-h-screen bg-[#f4f8fc] px-5 pb-24 pt-3 text-slate-950">
       <section className="mx-auto w-full max-w-md">
-        <header className="flex items-center justify-between gap-4">
-          <div>
-            <p className="text-sm font-semibold text-slate-500">Bom dia</p>
-            <h1 className="text-3xl font-black tracking-[-0.07em]">NeoVIa</h1>
-          </div>
-          <Link
-            href="/versoes"
-            className="text-xs font-semibold text-[#d8e2ec] transition hover:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/40"
+        <header className="flex items-start justify-between gap-4">
+          <button
+            type="button"
+            aria-label="NeoVIa"
+            className="flex min-w-0 items-center gap-2.5 rounded-2xl text-left focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
           >
-            MVP v0.0.7
-          </Link>
+            <span className="grid size-10 shrink-0 place-items-center rounded-2xl bg-brand-primary text-white shadow-sm">
+              <BusFront size={22} strokeWidth={2.5} />
+            </span>
+            <span className="truncate text-xl font-black tracking-[-0.05em] text-slate-950">
+              NeoVIa
+            </span>
+          </button>
+
+          <div className="flex flex-col items-end gap-1">
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                aria-label="Notificacoes"
+                className="grid size-10 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
+              >
+                <Bell size={19} />
+              </button>
+              <button
+                type="button"
+                aria-label="Perfil"
+                className="grid size-10 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
+              >
+                <UserRound size={19} />
+              </button>
+            </div>
+            <Link
+              href="/versoes"
+              className="text-xs font-semibold text-[#d8e2ec] transition hover:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/40"
+            >
+              MVP v0.0.8
+            </Link>
+          </div>
         </header>
 
         <label className="mt-3 flex h-12 items-center gap-3 rounded-[20px] border border-slate-200 bg-white px-4 shadow-sm focus-within:ring-2 focus-within:ring-brand-primary/25">

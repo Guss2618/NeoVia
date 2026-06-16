@@ -60,5 +60,14 @@
       "Adicionado resumo de movimentacoes recentes.",
       "Botao de versao MVP na tela inicial ajustado para aparecer como texto discreto."
     ]
+  },
+  {
+    "versao": "MVP v0.0.8",
+    "data": "2026-06-16",
+    "alteracoes": [
+      "Cabecalho da tela inicial atualizado com logotipo da plataforma no canto superior esquerdo.",
+      "Adicionados botoes falsos de notificacoes e perfil no canto superior direito.",
+      "Removidos os textos Bom dia e NeoVIa do antigo cabecalho da tela inicial."
+    ]
   }
 ]

@@ -59,3 +59,11 @@
 - Botao de versao MVP na tela inicial ajustado para texto discreto sem fundo azul.
 - Historico da MVP v0.0.7 atualizado com a alteracao visual do botao de versao.
 - Build de producao validado com `npm run build` apos o ajuste visual.
+
+## MVP v0.0.8
+
+- Iniciada a reformulacao do cabecalho superior da tela inicial.
+- Cabecalho superior da tela inicial atualizado com logotipo no canto esquerdo e botoes falsos de notificacoes e perfil no canto direito.
+- Textos `Bom dia` e `NeoVIa` removidos do bloco antigo do canto superior esquerdo.
+- Versao do sistema atualizada para MVP v0.0.8 em `agents.md`, tela inicial e historico de versoes.
+- Build de producao validado com `npm run build` apos a reformulacao do cabecalho.
