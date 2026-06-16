@@ -55,3 +55,7 @@
 - Pagina de cartao reformulada com replica visual do passe no topo, botao de recarga em destaque, opcao de gerar extrato, dados do cartao e movimentacoes recentes.
 - Versao do sistema atualizada para MVP v0.0.7.
 - Build de producao validado com `npm run build` apos a reformulacao da pagina de cartao.
+- Iniciada a discretizacao do botao de versao MVP na tela inicial.
+- Botao de versao MVP na tela inicial ajustado para texto discreto sem fundo azul.
+- Historico da MVP v0.0.7 atualizado com a alteracao visual do botao de versao.
+- Build de producao validado com `npm run build` apos o ajuste visual.

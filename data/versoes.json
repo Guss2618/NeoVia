@@ -57,7 +57,8 @@
     "alteracoes": [
       "Pagina de cartao reformulada com replica visual do passe e saldo no topo.",
       "Adicionados botao de recarga em destaque, opcao de gerar extrato e dados do cartao.",
-      "Adicionado resumo de movimentacoes recentes."
+      "Adicionado resumo de movimentacoes recentes.",
+      "Botao de versao MVP na tela inicial ajustado para aparecer como texto discreto."
     ]
   }
 ]

@@ -32,7 +32,7 @@ export default function InicioPage() {
           </div>
           <Link
             href="/versoes"
-            className="rounded-full bg-brand-primary px-4 py-2 text-sm font-bold text-white shadow-sm transition hover:bg-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary/30"
+            className="text-xs font-semibold text-[#d8e2ec] transition hover:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/40"
           >
             MVP v0.0.7
           </Link>
