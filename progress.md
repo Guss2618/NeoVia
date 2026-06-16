@@ -76,3 +76,12 @@
 - Versao do sistema atualizada para MVP v0.0.9 em `agents.md`, tela inicial e historico de versoes.
 - Build de producao validado com `npm run build` apos o ajuste do menu superior.
 - Rota local `/inicio` validada com status 200 e HTML contendo o cabecalho branco atualizado.
+
+## MVP v0.0.10
+
+- Iniciada a centralizacao do texto de versao MVP entre a logo e os icones do menu superior.
+- Texto de versao MVP reposicionado no centro do menu superior, entre a logo e os icones de notificacoes e perfil.
+- Layout do cabecalho ajustado para manter logo, versao e icones alinhados na mesma linha.
+- Versao do sistema atualizada para MVP v0.0.10 em `agents.md`, tela inicial e historico de versoes.
+- Build de producao validado com `npm run build` apos o reposicionamento da versao no cabecalho.
+- Rota local `/inicio` validada com status 200 e HTML contendo a ordem logo, versao e icones.

@@ -27,7 +27,7 @@ export default function InicioPage() {
   return (
     <main className="min-h-screen bg-[#f4f8fc] px-5 pb-24 text-slate-950">
       <section className="mx-auto w-full max-w-md">
-        <header className="-mx-5 flex items-start justify-between gap-4 border-b border-slate-200 bg-white px-5 pb-3 pt-3 shadow-sm">
+        <header className="-mx-5 flex items-center justify-between gap-3 border-b border-slate-200 bg-white px-5 py-3 shadow-sm">
           <button
             type="button"
             aria-label="NeoVIa"
@@ -41,29 +41,28 @@ export default function InicioPage() {
             </span>
           </button>
 
-          <div className="flex flex-col items-end gap-1">
-            <div className="flex items-center gap-2">
-              <button
-                type="button"
-                aria-label="Notificacoes"
-                className="grid size-10 place-items-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200 hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
-              >
-                <Bell size={19} />
-              </button>
-              <button
-                type="button"
-                aria-label="Perfil"
-                className="grid size-10 place-items-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200 hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
-              >
-                <UserRound size={19} />
-              </button>
-            </div>
-            <Link
-              href="/versoes"
-              className="text-xs font-semibold text-slate-300 transition hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-300/40"
+          <Link
+            href="/versoes"
+            className="shrink-0 text-[11px] font-semibold text-slate-300 transition hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-300/40"
+          >
+            MVP v0.0.10
+          </Link>
+
+          <div className="flex shrink-0 items-center gap-2">
+            <button
+              type="button"
+              aria-label="Notificacoes"
+              className="grid size-10 place-items-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200 hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
             >
-              MVP v0.0.9
-            </Link>
+              <Bell size={19} />
+            </button>
+            <button
+              type="button"
+              aria-label="Perfil"
+              className="grid size-10 place-items-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200 hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
+            >
+              <UserRound size={19} />
+            </button>
           </div>
         </header>
 

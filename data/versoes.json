@@ -78,5 +78,13 @@
       "Cores do logotipo, botoes de notificacoes e perfil ajustadas para manter contraste no novo fundo.",
       "Indicador de versao mantido discreto no cabecalho branco."
     ]
+  },
+  {
+    "versao": "MVP v0.0.10",
+    "data": "2026-06-16",
+    "alteracoes": [
+      "Texto de versao MVP reposicionado no centro do menu superior, entre a logo e os icones de notificacoes e perfil.",
+      "Layout do cabecalho ajustado para manter os tres grupos alinhados na mesma linha."
+    ]
   }
 ]
