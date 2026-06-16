@@ -21,7 +21,7 @@ export default function InicioPage() {
   return (
     <main className="min-h-screen bg-[#f4f8fc] px-5 pb-24 text-slate-950">
       <section className="mx-auto w-full max-w-md">
-        <AppTopBar className="-mx-5" version="MVP v0.0.13" />
+        <AppTopBar className="-mx-5" version="MVP v0.0.14" />
 
         <label className="mt-6 flex h-12 items-center gap-3 rounded-[20px] border border-slate-200 bg-white px-4 shadow-sm focus-within:ring-2 focus-within:ring-brand-primary/25">
           <Search className="text-brand-primary" size={20} />
@@ -50,7 +50,7 @@ export default function InicioPage() {
                   <p className="text-[10px] font-black uppercase tracking-wide text-brand-primary">
                     {route.line}
                   </p>
-                  <h3 className="truncate text-sm font-black tracking-tighter">
+                  <h3 className="truncate text-sm font-black tracking-tighter text-[hsl(228.51deg_100%_19.94%)]">
                     {route.title}
                   </h3>
                 </div>

@@ -110,5 +110,12 @@
     "alteracoes": [
       "Botao Recarregar cartao no card da tela inicial ajustado com o mesmo fundo e cor de texto do indicador de ultima atualizacao da pagina de cartao."
     ]
+  },
+  {
+    "versao": "MVP v0.0.14",
+    "data": "2026-06-16",
+    "alteracoes": [
+      "Nomes das rotas favoritas na tela inicial atualizados para a cor hsl(228.51deg 100% 19.94%)."
+    ]
   }
 ]

@@ -112,3 +112,11 @@
 - Versao do sistema atualizada para MVP v0.0.13 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
 - Build de producao validado com `npm run build` apos a harmonizacao visual do botao.
 - Rota local `/inicio` validada com status 200 e HTML contendo as novas classes do botao de recarga.
+
+## MVP v0.0.14
+
+- Iniciada a alteracao da cor dos nomes das rotas favoritas na tela inicial.
+- Nomes das rotas favoritas atualizados para `hsl(228.51deg 100% 19.94%)`.
+- Versao do sistema atualizada para MVP v0.0.14 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
+- Build de producao validado com `npm run build` apos o ajuste de cor das rotas favoritas.
+- Rota local `/inicio` validada com status 200 e HTML contendo a nova classe de cor das rotas favoritas.
