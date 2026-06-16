@@ -69,5 +69,14 @@
       "Adicionados botoes falsos de notificacoes e perfil no canto superior direito.",
       "Removidos os textos Bom dia e NeoVIa do antigo cabecalho da tela inicial."
     ]
+  },
+  {
+    "versao": "MVP v0.0.9",
+    "data": "2026-06-16",
+    "alteracoes": [
+      "Menu superior da tela inicial atualizado com fundo branco.",
+      "Cores do logotipo, botoes de notificacoes e perfil ajustadas para manter contraste no novo fundo.",
+      "Indicador de versao mantido discreto no cabecalho branco."
+    ]
   }
 ]

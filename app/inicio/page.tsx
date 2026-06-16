@@ -25,9 +25,9 @@ const favoriteRoutes = [
 
 export default function InicioPage() {
   return (
-    <main className="min-h-screen bg-[#f4f8fc] px-5 pb-24 pt-3 text-slate-950">
+    <main className="min-h-screen bg-[#f4f8fc] px-5 pb-24 text-slate-950">
       <section className="mx-auto w-full max-w-md">
-        <header className="flex items-start justify-between gap-4">
+        <header className="-mx-5 flex items-start justify-between gap-4 border-b border-slate-200 bg-white px-5 pb-3 pt-3 shadow-sm">
           <button
             type="button"
             aria-label="NeoVIa"
@@ -36,7 +36,7 @@ export default function InicioPage() {
             <span className="grid size-10 shrink-0 place-items-center rounded-2xl bg-brand-primary text-white shadow-sm">
               <BusFront size={22} strokeWidth={2.5} />
             </span>
-            <span className="truncate text-xl font-black tracking-[-0.05em] text-slate-950">
+            <span className="truncate text-xl font-black tracking-[-0.05em] text-brand-dark">
               NeoVIa
             </span>
           </button>
@@ -46,23 +46,23 @@ export default function InicioPage() {
               <button
                 type="button"
                 aria-label="Notificacoes"
-                className="grid size-10 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
+                className="grid size-10 place-items-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200 hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
               >
                 <Bell size={19} />
               </button>
               <button
                 type="button"
                 aria-label="Perfil"
-                className="grid size-10 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
+                className="grid size-10 place-items-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200 hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
               >
                 <UserRound size={19} />
               </button>
             </div>
             <Link
               href="/versoes"
-              className="text-xs font-semibold text-[#d8e2ec] transition hover:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/40"
+              className="text-xs font-semibold text-slate-300 transition hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-300/40"
             >
-              MVP v0.0.8
+              MVP v0.0.9
             </Link>
           </div>
         </header>

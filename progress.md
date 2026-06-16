@@ -67,3 +67,12 @@
 - Textos `Bom dia` e `NeoVIa` removidos do bloco antigo do canto superior esquerdo.
 - Versao do sistema atualizada para MVP v0.0.8 em `agents.md`, tela inicial e historico de versoes.
 - Build de producao validado com `npm run build` apos a reformulacao do cabecalho.
+
+## MVP v0.0.9
+
+- Iniciada a alteracao do menu superior da tela inicial para fundo branco.
+- Menu superior da tela inicial atualizado com fundo branco, borda inferior e sombra leve.
+- Cores do logotipo, botoes falsos de notificacoes e perfil e indicador de versao ajustadas para o novo fundo branco.
+- Versao do sistema atualizada para MVP v0.0.9 em `agents.md`, tela inicial e historico de versoes.
+- Build de producao validado com `npm run build` apos o ajuste do menu superior.
+- Rota local `/inicio` validada com status 200 e HTML contendo o cabecalho branco atualizado.

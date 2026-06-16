@@ -11,7 +11,7 @@ Prestes a iniciar uma tarefa.
 Ao finalizar uma tarefa.
 Nunca apagar registros do `progress.md` anteriores, somente adicionar.
 Versão
-Versão: MVP v0.0.8
+Versão: MVP v0.0.9
 Versionamento
 Sempre fazer commits no formato: MVP x.x.x (número da versão atual).
 Sempre atualizar o versionamento do sistema em `agents.md` e `progress.md` a cada mudança significativa.
