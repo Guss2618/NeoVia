@@ -1,0 +1,6 @@
+{
+  "tarifa": 5.0,
+  "integracao": true,
+  "janelaIntegracaoMin": 120,
+  "moeda": "BRL"
+}

@@ -62,7 +62,7 @@ export default function InicioPage() {
               href="/versoes"
               className="text-xs font-semibold text-[#d8e2ec] transition hover:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/40"
             >
-              MVP v0.0.8
+              MVP v0.0.12
             </Link>
           </div>
         </header>

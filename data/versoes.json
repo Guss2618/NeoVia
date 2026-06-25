@@ -69,5 +69,35 @@
       "Adicionados botoes falsos de notificacoes e perfil no canto superior direito.",
       "Removidos os textos Bom dia e NeoVIa do antigo cabecalho da tela inicial."
     ]
+  },
+  {
+    "versao": "MVP v0.0.9",
+    "data": "2026-06-24",
+    "alteracoes": [
+      "Tela de rotas reformulada no modelo Uber com mapa interativo Leaflet e OpenStreetMap.",
+      "Adicionada extracao de pontos de onibus reais da Grande Florianopolis via OpenStreetMap.",
+      "Adicionada selecao de origem e destino por busca de endereco ou toque no mapa.",
+      "Adicionadas API Routes para pontos de onibus proximos e geocodificacao de enderecos."
+    ]
+  },
+  {
+    "versao": "MVP v0.0.10",
+    "data": "2026-06-24",
+    "alteracoes": [
+      "Adicionado calculo de rota entre origem e destino com ponto de embarque, horario de saida e ponto de desembarque.",
+      "Adicionado suporte a baldeacao quando nao existe linha direta.",
+      "Adicionados trechos a pe ate o ponto e do desembarque ate o destino, com distancia e tempo.",
+      "Adicionado calculo de preco da viagem com tarifa unica por integracao.",
+      "Adicionado desenho do trajeto no mapa e itinerario passo a passo na tela de rotas.",
+      "Extraidas as linhas de onibus reais da regiao via OpenStreetMap e gerados horarios estimados por frequencia."
+    ]
+  },
+  {
+    "versao": "MVP v0.0.12",
+    "data": "2026-06-25",
+    "alteracoes": [
+      "Corrigido conflito de scroll no mobile ao arrastar o mapa na tela de rotas.",
+      "Toques no mapa passam a mover apenas o mapa, sem rolar a pagina inteira."
+    ]
   }
 ]

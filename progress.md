@@ -67,3 +67,55 @@
 - Textos `Bom dia` e `NeoVIa` removidos do bloco antigo do canto superior esquerdo.
 - Versao do sistema atualizada para MVP v0.0.8 em `agents.md`, tela inicial e historico de versoes.
 - Build de producao validado com `npm run build` apos a reformulacao do cabecalho.
+
+## MVP v0.0.9
+
+- Pesquisada a disponibilidade de dados de transporte da Jotur e da Grande Florianopolis.
+- Constatado que a Jotur nao possui API publica nem feed GTFS oficial e que nao ha dados abertos GTFS da regiao.
+- Definido o uso do OpenStreetMap (Overpass API) como fonte de pontos de onibus e do Leaflet com tiles do OSM para o mapa.
+- Iniciada a reformulacao da tela `/rotas` no modelo Uber com mapa interativo.
+- Extraidos 3091 pontos de onibus reais da Grande Florianopolis via Overpass API e salvos em `data/pontos.json`.
+- Instaladas as dependencias `leaflet` e `react-leaflet`.
+- Criada a API Route `/api/pontos` para retornar pontos de onibus proximos a uma coordenada (filtro por raio com distancia de Haversine).
+- Criada a API Route `/api/geocode` para busca de endereco e geocodificacao reversa via Nominatim do OpenStreetMap.
+- Criado o componente client-side `components/MapaRotas.tsx` com mapa Leaflet, pontos de onibus e marcadores de origem e destino.
+- Criada a view `components/RotasView.tsx` com selecao de origem e destino por busca de endereco, toque no mapa e botao de localizacao atual.
+- Tela `/rotas` passou a renderizar a nova view mobile-first com mapa.
+- Versao do sistema atualizada para MVP v0.0.9 em `agents.md`, tela inicial, `package.json` e historico de versoes.
+- Build de producao validado com `npm run build` apos a reformulacao da tela de rotas.
+
+## MVP v0.0.10
+
+- Iniciada a implementacao do calculo de rota (ponto de embarque, horario, ponto de desembarque, trecho a pe e preco).
+- Extraidas 155 linhas de onibus reais (relacoes route=bus) da Grande Florianopolis via Overpass API, mesclando paradas de papeis stop e platform, salvas em `data/linhas.json`.
+- Constatado que a cobertura de linhas no OpenStreetMap e concentrada em Florianopolis; linhas da Jotur/Palhoca nao estao mapeadas como relacoes com paradas.
+- Gerados horarios estimados por frequencia (intervalo entre onibus e janela de operacao) para cada linha.
+- Criado `data/tarifas.json` com tarifa unica e regra de integracao de 120 minutos.
+- Criado o tipo compartilhado `lib/rotas.ts` para itinerarios, etapas e linhas.
+- Criada a API Route `/api/rotas` com roteamento por linha direta e por baldeacao, calculo de tempo de caminhada e de viagem, proxima partida no ponto e preco com integracao.
+- Atualizado `components/MapaRotas.tsx` para desenhar o trajeto a pe e de onibus e ajustar o enquadramento ao trajeto.
+- Atualizada a `components/RotasView.tsx` com botao Buscar rota, selecao entre opcoes de itinerario e detalhamento passo a passo (caminhada, embarque, desembarque, preco e horarios).
+- Itinerario marcado com aviso de que os horarios sao estimados e que pontos e linhas vem do OpenStreetMap.
+- Versao do sistema atualizada para MVP v0.0.10 em `agents.md`, tela inicial, `package.json` e historico de versoes.
+- Build de producao validado com `npm run build` apos a implementacao do calculo de rota.
+
+## MVP v0.0.11
+
+- Investigado o site da Jotur e confirmado que os horarios sao renderizados por JavaScript, sem API aberta nem itinerarios geocodificados utilizaveis.
+- Confirmado via Overpass que nao existe nenhuma linha route=bus mapeada no OpenStreetMap num raio de 1,5 km do centro de Palhoca; a rede da Jotur nao esta no OSM.
+- Reextraidas as linhas usando a geometria das rotas (out geom) casada com os pontos reais por proximidade (snap), elevando a media de paradas por linha e melhorando a cobertura onde ha dados.
+- Criada a API Route `/api/caminhada` que consulta o servico de pedestres do OpenStreetMap (OSRM foot) e retorna o trajeto a pe seguindo as ruas.
+- Atualizada a `components/RotasView.tsx` para buscar o trajeto a pe real do itinerario selecionado e desenhar o caminho pelas vias no mapa.
+- Distancia e tempo de caminhada exibidos passam a refletir o caminho real pelas ruas, com fallback para linha reta em caso de falha.
+- Criado `scripts/extrair-linhas.js` para reproduzir a extracao das linhas a partir da geometria do OSM.
+- Versao do sistema atualizada para MVP v0.0.11 em `agents.md`, tela inicial, `package.json` e historico de versoes.
+- Build de producao validado com `npm run build` apos a melhoria do trecho a pe.
+- Botao Buscar rota transformado em botao flutuante fixo, sobreposto logo acima do menu inferior, exibido assim que origem e destino sao definidos.
+- Mapa passou a exibir apenas os pontos de embarque e desembarque do itinerario selecionado, sem mostrar todos os pontos proximos.
+
+## MVP v0.0.12
+
+- Corrigido conflito de scroll no mobile na tela `/rotas`: ao arrastar o mapa, a pagina inteira nao rola mais junto.
+- Adicionado isolamento de toques no Leaflet (`touch-action: none`, `overscroll-behavior: contain` e bloqueio de propagacao de touchmove).
+- Versao do sistema atualizada para MVP v0.0.12 em `agents.md`, tela inicial e historico de versoes.
+- Build de producao validado com `npm run build`.
