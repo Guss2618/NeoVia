@@ -7,6 +7,7 @@ import {
   Route,
 } from "lucide-react";
 import Link from "next/link";
+import { StartLoadingLink } from "../components/StartLoadingLink";
 
 const features = [
   {
@@ -28,7 +29,7 @@ const features = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_32%),linear-gradient(145deg,#0a2b52_0%,#0f3f74_52%,#071f3d_100%)] px-5 pb-28 pt-6 text-white sm:px-8">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_32%),linear-gradient(145deg,#0a2b52_0%,#0f3f74_52%,#071f3d_100%)] px-5 pb-6 pt-6 text-white sm:px-8 sm:pb-8">
       <section className="mx-auto flex min-h-[calc(100vh-48px)] w-full max-w-6xl flex-col justify-between gap-10">
         <header className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
@@ -46,7 +47,7 @@ export default function Home() {
             href="/versoes"
             className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white/80 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/80"
           >
-            MVP v0.0.12
+            MVP v0.0.24
           </Link>
         </header>
 
@@ -65,13 +66,13 @@ export default function Home() {
               PC.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
+              <StartLoadingLink
                 href="/inicio"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-base font-black text-brand-primary shadow-card transition hover:-translate-y-0.5 hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/80"
               >
                 Começar
                 <ArrowRight size={20} />
-              </Link>
+              </StartLoadingLink>
               <Link
                 href="/versoes"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 px-6 py-3 text-base font-bold text-white/80 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/80"

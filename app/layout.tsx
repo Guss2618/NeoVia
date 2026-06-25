@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { AppShell } from "../components/AppShell";
 import { BottomNav } from "../components/BottomNav";
 import "./globals.css";
 
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
-        {children}
+        <AppShell>{children}</AppShell>
         <BottomNav />
       </body>
     </html>

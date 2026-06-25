@@ -70,52 +70,163 @@
 
 ## MVP v0.0.9
 
-- Pesquisada a disponibilidade de dados de transporte da Jotur e da Grande Florianopolis.
-- Constatado que a Jotur nao possui API publica nem feed GTFS oficial e que nao ha dados abertos GTFS da regiao.
-- Definido o uso do OpenStreetMap (Overpass API) como fonte de pontos de onibus e do Leaflet com tiles do OSM para o mapa.
-- Iniciada a reformulacao da tela `/rotas` no modelo Uber com mapa interativo.
-- Extraidos 3091 pontos de onibus reais da Grande Florianopolis via Overpass API e salvos em `data/pontos.json`.
-- Instaladas as dependencias `leaflet` e `react-leaflet`.
-- Criada a API Route `/api/pontos` para retornar pontos de onibus proximos a uma coordenada (filtro por raio com distancia de Haversine).
-- Criada a API Route `/api/geocode` para busca de endereco e geocodificacao reversa via Nominatim do OpenStreetMap.
-- Criado o componente client-side `components/MapaRotas.tsx` com mapa Leaflet, pontos de onibus e marcadores de origem e destino.
-- Criada a view `components/RotasView.tsx` com selecao de origem e destino por busca de endereco, toque no mapa e botao de localizacao atual.
-- Tela `/rotas` passou a renderizar a nova view mobile-first com mapa.
-- Versao do sistema atualizada para MVP v0.0.9 em `agents.md`, tela inicial, `package.json` e historico de versoes.
-- Build de producao validado com `npm run build` apos a reformulacao da tela de rotas.
+- Iniciada a alteracao do menu superior da tela inicial para fundo branco.
+- Menu superior da tela inicial atualizado com fundo branco, borda inferior e sombra leve.
+- Cores do logotipo, botoes falsos de notificacoes e perfil e indicador de versao ajustadas para o novo fundo branco.
+- Versao do sistema atualizada para MVP v0.0.9 em `agents.md`, tela inicial e historico de versoes.
+- Build de producao validado com `npm run build` apos o ajuste do menu superior.
+- Rota local `/inicio` validada com status 200 e HTML contendo o cabecalho branco atualizado.
 
 ## MVP v0.0.10
 
-- Iniciada a implementacao do calculo de rota (ponto de embarque, horario, ponto de desembarque, trecho a pe e preco).
-- Extraidas 155 linhas de onibus reais (relacoes route=bus) da Grande Florianopolis via Overpass API, mesclando paradas de papeis stop e platform, salvas em `data/linhas.json`.
-- Constatado que a cobertura de linhas no OpenStreetMap e concentrada em Florianopolis; linhas da Jotur/Palhoca nao estao mapeadas como relacoes com paradas.
-- Gerados horarios estimados por frequencia (intervalo entre onibus e janela de operacao) para cada linha.
-- Criado `data/tarifas.json` com tarifa unica e regra de integracao de 120 minutos.
-- Criado o tipo compartilhado `lib/rotas.ts` para itinerarios, etapas e linhas.
-- Criada a API Route `/api/rotas` com roteamento por linha direta e por baldeacao, calculo de tempo de caminhada e de viagem, proxima partida no ponto e preco com integracao.
-- Atualizado `components/MapaRotas.tsx` para desenhar o trajeto a pe e de onibus e ajustar o enquadramento ao trajeto.
-- Atualizada a `components/RotasView.tsx` com botao Buscar rota, selecao entre opcoes de itinerario e detalhamento passo a passo (caminhada, embarque, desembarque, preco e horarios).
-- Itinerario marcado com aviso de que os horarios sao estimados e que pontos e linhas vem do OpenStreetMap.
-- Versao do sistema atualizada para MVP v0.0.10 em `agents.md`, tela inicial, `package.json` e historico de versoes.
-- Build de producao validado com `npm run build` apos a implementacao do calculo de rota.
+- Iniciada a centralizacao do texto de versao MVP entre a logo e os icones do menu superior.
+- Texto de versao MVP reposicionado no centro do menu superior, entre a logo e os icones de notificacoes e perfil.
+- Layout do cabecalho ajustado para manter logo, versao e icones alinhados na mesma linha.
+- Versao do sistema atualizada para MVP v0.0.10 em `agents.md`, tela inicial e historico de versoes.
+- Build de producao validado com `npm run build` apos o reposicionamento da versao no cabecalho.
+- Rota local `/inicio` validada com status 200 e HTML contendo a ordem logo, versao e icones.
 
 ## MVP v0.0.11
 
-- Investigado o site da Jotur e confirmado que os horarios sao renderizados por JavaScript, sem API aberta nem itinerarios geocodificados utilizaveis.
-- Confirmado via Overpass que nao existe nenhuma linha route=bus mapeada no OpenStreetMap num raio de 1,5 km do centro de Palhoca; a rede da Jotur nao esta no OSM.
-- Reextraidas as linhas usando a geometria das rotas (out geom) casada com os pontos reais por proximidade (snap), elevando a media de paradas por linha e melhorando a cobertura onde ha dados.
-- Criada a API Route `/api/caminhada` que consulta o servico de pedestres do OpenStreetMap (OSRM foot) e retorna o trajeto a pe seguindo as ruas.
-- Atualizada a `components/RotasView.tsx` para buscar o trajeto a pe real do itinerario selecionado e desenhar o caminho pelas vias no mapa.
-- Distancia e tempo de caminhada exibidos passam a refletir o caminho real pelas ruas, com fallback para linha reta em caso de falha.
-- Criado `scripts/extrair-linhas.js` para reproduzir a extracao das linhas a partir da geometria do OSM.
-- Versao do sistema atualizada para MVP v0.0.11 em `agents.md`, tela inicial, `package.json` e historico de versoes.
-- Build de producao validado com `npm run build` apos a melhoria do trecho a pe.
-- Botao Buscar rota transformado em botao flutuante fixo, sobreposto logo acima do menu inferior, exibido assim que origem e destino sao definidos.
-- Mapa passou a exibir apenas os pontos de embarque e desembarque do itinerario selecionado, sem mostrar todos os pontos proximos.
+- Iniciada a adicao do menu superior compartilhado na pagina de cartao e o aumento do espacamento ate o input de rota.
+- Cabecalho superior extraido para `components/AppTopBar.tsx`.
+- Menu superior compartilhado adicionado a pagina de cartao.
+- Distancia entre o menu superior e o input `Escolha sua rota` aumentada na tela inicial.
+- Versao do sistema atualizada para MVP v0.0.11 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
+- Build de producao validado com `npm run build` apos a adicao do cabecalho compartilhado.
+- Rotas locais `/inicio` e `/recarga` validadas com status 200 e HTML contendo o menu superior atualizado.
 
 ## MVP v0.0.12
 
-- Corrigido conflito de scroll no mobile na tela `/rotas`: ao arrastar o mapa, a pagina inteira nao rola mais junto.
-- Adicionado isolamento de toques no Leaflet (`touch-action: none`, `overscroll-behavior: contain` e bloqueio de propagacao de touchmove).
-- Versao do sistema atualizada para MVP v0.0.12 em `agents.md`, tela inicial e historico de versoes.
-- Build de producao validado com `npm run build`.
+- Iniciada a troca do texto de ultima atualizacao no card de cartao da tela inicial por um botao de recarga.
+- Texto de ultima atualizacao no card de cartao da tela inicial substituido por botao `Recarregar cartão`.
+- Botao `Recarregar cartão` configurado como link para `/recarga`.
+- Versao do sistema atualizada para MVP v0.0.12 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
+- Build de producao validado com `npm run build` apos a troca no card de cartao.
+- Rota local `/inicio` validada com status 200 e HTML contendo o novo botao de recarga.
+
+## MVP v0.0.13
+
+- Iniciada a harmonizacao das cores do botao `Recarregar cartão` na tela inicial com o indicador de ultima atualizacao da pagina de cartao.
+- Botao `Recarregar cartão` no card da tela inicial atualizado para `bg-white/10` e `text-white/80`, acompanhando o indicador de ultima atualizacao da pagina de cartao.
+- Versao do sistema atualizada para MVP v0.0.13 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
+- Build de producao validado com `npm run build` apos a harmonizacao visual do botao.
+- Rota local `/inicio` validada com status 200 e HTML contendo as novas classes do botao de recarga.
+
+## MVP v0.0.14
+
+- Iniciada a alteracao da cor dos nomes das rotas favoritas na tela inicial.
+- Nomes das rotas favoritas atualizados para `hsl(228.51deg 100% 19.94%)`.
+- Versao do sistema atualizada para MVP v0.0.14 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
+- Build de producao validado com `npm run build` apos o ajuste de cor das rotas favoritas.
+- Rota local `/inicio` validada com status 200 e HTML contendo a nova classe de cor das rotas favoritas.
+
+## MVP v0.0.15
+
+- Iniciada a criacao da experiencia de recarga de cartao com saldo atual, valores de deposito e metodos de pagamento.
+- Pagina `/recarga` reformulada com saldo atual, selecao de valores de deposito, selecao de metodo de pagamento, resumo de taxas e saldo apos recarga.
+- Dados da recarga adicionados em `data/cartao.json` e expostos pela API Route `/api/cartao`.
+- Versao do sistema atualizada para MVP v0.0.15 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
+- Build de producao validado com `npm run build` apos a criacao da pagina de recarga.
+- Rotas locais `/recarga` e `/versoes` validadas com status 200; API local `/api/cartao` validada com dados de saldo, valores e metodos de pagamento.
+
+## MVP v0.0.16
+
+- Iniciada a separacao da pagina de cartao e da pagina especifica de recarga e pagamento.
+- Pagina `/recarga/pagamento` criada com os componentes de proxima recarga, escolha de valor, input de valor personalizado e metodo de pagamento.
+- Pagina `/recarga` voltou a funcionar como area do cartao, com botao `Realizar recarga` redirecionando para `/recarga/pagamento`.
+- Atalho de recarga da tela inicial atualizado para apontar para `/recarga/pagamento`.
+- Menu inferior ocultado apenas no fluxo `/recarga/pagamento` para aumentar a area util da tela e reduzir a necessidade de rolagem.
+- Versao do sistema atualizada para MVP v0.0.16 em `agents.md`, tela inicial, paginas de recarga e historico de versoes.
+- Build de producao validado com `npm run build` apos a separacao do fluxo de pagamento.
+- Rotas locais `/recarga`, `/recarga/pagamento` e `/api/cartao` validadas com status 200.
+
+## MVP v0.0.17
+
+- Iniciada a revisao visual da pagina `/recarga/pagamento` para manter o menu inferior, remover o menu superior e alinhar as cores dos textos com os azuis da tela inicial.
+- Menu inferior restaurado na pagina `/recarga/pagamento` removendo a excecao em `BottomNav`.
+- Menu superior com logo, notificacoes e perfil removido da pagina `/recarga/pagamento`.
+- Textos escuros da pagina de pagamento substituidos por `brand-primary` e pelo azul escuro usado nos nomes das rotas favoritas da tela inicial.
+- Versao do sistema atualizada para MVP v0.0.17 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
+- Build de producao validado com `npm run build` apos os ajustes visuais da pagina de pagamento.
+- Rotas locais `/recarga/pagamento`, `/recarga` e `/versoes` validadas com status 200.
+
+## MVP v0.0.18
+
+- Iniciada a remocao do componente de proxima recarga da pagina `/recarga/pagamento`.
+- Iniciada a adaptacao responsiva da tela inicial para desktop com menu lateral em telas maiores.
+- Componente de proxima recarga removido da pagina `/recarga/pagamento`, incluindo imports e calculos usados somente por esse bloco.
+- Grade da pagina de pagamento ajustada para duas colunas no desktop e dois blocos empilhados no mobile: escolha de valor e metodo de pagamento.
+- Espacamento entre elementos da tela de pagamento aumentado de forma moderada, mantendo a estrutura compacta para caber junto ao menu inferior.
+- Versao do sistema atualizada para MVP v0.0.18 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
+- Build de producao validado com `npm run build` apos a remocao do componente.
+- Rotas locais `/recarga/pagamento`, `/recarga` e `/versoes` validadas com status 200.
+- Iniciada a remocao do menu inferior da tela default `/`.
+- Menu inferior removido da tela default `/` por condicao de rota em `BottomNav`.
+- Deslocamento lateral do conteudo ajustado para nao ser aplicado na tela default `/`.
+- Historico de versoes atualizado com a remocao do menu inferior na tela default.
+- Build de producao validado com `npm run build` apos a remocao do menu inferior da tela default.
+- Rotas locais `/` e `/inicio` validadas: `/` sem menu inferior e sem deslocamento lateral; `/inicio` mantendo a navegacao.
+- Tela `/inicio` adaptada para desktop com largura ampliada, busca mais larga e rotas/cartao organizados em colunas.
+- Menu inferior convertido em menu lateral esquerdo a partir de telas `md`, mantendo o rodape atual no mobile.
+- Build de producao validado com `npm run build` apos os ajustes de responsividade.
+- Rotas locais `/`, `/inicio`, `/recarga` e `/versoes` validadas com status 200.
+
+## MVP v0.0.19
+
+- Iniciada a remocao do cabecalho secundario da pagina `/recarga` e harmonizacao das fontes escuras com o azul da tela inicial.
+- Cabecalho secundario com link de voltar e titulo `Meu cartao` removido da pagina `/recarga`.
+- Fontes escuras da pagina `/recarga` substituidas pela cor azul usada na tela inicial, mantendo branco no card principal e verde nos estados positivos.
+- Titulos `Informacoes` e `Historico` reposicionados acima dos componentes da pagina `/recarga`, seguindo o padrao visual da tela inicial.
+- Versao do sistema atualizada para MVP v0.0.19 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
+- Build de producao validado com `npm run build` apos os ajustes finais na pagina de recarga.
+- Rotas locais `/recarga`, `/versoes` e `/inicio` validadas com status 200.
+
+## MVP v0.0.20
+
+- Iniciada a reorganizacao da pagina `/recarga` para mover `Gerar extrato` ao final e simplificar o card de dados do cartao.
+- Componente `Gerar extrato` movido para depois do historico na pagina `/recarga`.
+- Titulo externo `Informacoes` renomeado para `Dados do cartao`.
+- Titulo interno e icone do card de dados do cartao removidos para evitar duplicidade visual.
+- Versao do sistema atualizada para MVP v0.0.20 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
+- Build de producao validado com `npm run build` apos a reorganizacao da pagina de recarga.
+- Rotas locais `/recarga`, `/versoes` e `/inicio` validadas com status 200.
+
+## MVP v0.0.21
+
+- Iniciada a remocao dos titulos internos dos componentes de historico e extrato da pagina `/recarga`.
+- Titulo interno `Movimentacoes recentes` removido do componente de historico, mantendo apenas o titulo externo `Historico`.
+- Titulo externo `Gerar extrato` adicionado acima do componente no mesmo formato dos demais titulos da pagina `/recarga`.
+- Titulo interno `Gerar extrato` removido do botao de extrato, mantendo a descricao e o icone.
+- Versao do sistema atualizada para MVP v0.0.21 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
+
+## MVP v0.0.22
+
+- Iniciada a criacao de uma tela de carregamento ao clicar em `Comecar` na pagina default `/`.
+- Tela de carregamento criada com a marca NeoVIa usada no menu superior compartilhado.
+- Botao `Comecar` da pagina default atualizado para exibir a tela de carregamento antes de navegar para `/inicio`.
+- Menu inferior/lateral removido da pagina `/versoes`.
+- Deslocamento lateral de conteudo removido da pagina `/versoes` em telas maiores.
+- Versao do sistema atualizada para MVP v0.0.22 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
+- Build de producao validado com `npm run build` apos os ajustes de carregamento, historico, extrato e menu de versoes.
+- Rotas locais `/`, `/versoes`, `/recarga` e `/inicio` validadas com status 200.
+
+## MVP v0.0.23
+
+- Iniciada a padronizacao dos componentes da tela `/recarga/pagamento` para manter no maximo um titulo por bloco.
+- Iniciada a correcao do codigo atual para restaurar o funcionamento correto do projeto.
+- Imports `Banknote` e `Smartphone` restaurados na pagina `/recarga/pagamento`, corrigindo o erro de TypeScript que quebrava o build.
+- Historico local de versoes atualizado em `data/versoes.json` com a MVP v0.0.23.
+- Build de producao validado com `npm run build` apos a correcao.
+- Rotas locais `/recarga/pagamento`, `/api/cartao` e `/inicio` validadas com status 200.
+
+## MVP v0.0.24
+
+- Integrado modulo de rotas da branch gustavo com mapa Leaflet, geocoding e roteamento por onibus.
+- Tela `/rotas` reformulada no modelo Uber com selecao de origem e destino, busca de endereco e toque no mapa.
+- Extraidos pontos e linhas de onibus reais da Grande Florianopolis via OpenStreetMap (`data/pontos.json`, `data/linhas.json`).
+- Criadas API Routes `/api/rotas`, `/api/geocode`, `/api/caminhada` e `/api/pontos`.
+- Adicionado roteamento com linha direta ou baldeacao (ate 2 onibus), trechos a pe pelas ruas e calculo de preco.
+- Corrigido conflito de scroll no mobile ao arrastar o mapa (`touch-action: none` e isolamento de toques).
+- Versao do sistema atualizada para MVP v0.0.24 em `agents.md`, tela inicial e historico de versoes.
+- Build de producao validado com `npm run build` apos a integracao do modulo de rotas.

@@ -1,6 +1,6 @@
 {
   "name": "neovia",
-  "version": "0.0.12",
+  "version": "0.0.24",
   "private": true,
   "scripts": {
     "dev": "next dev",

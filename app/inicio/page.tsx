@@ -1,12 +1,6 @@
-import {
-  Bell,
-  CalendarClock,
-  BusFront,
-  CreditCard,
-  Search,
-  UserRound,
-} from "lucide-react";
+import { BusFront, CreditCard, Plus, Search } from "lucide-react";
 import Link from "next/link";
+import { AppTopBar } from "../../components/AppTopBar";
 
 const favoriteRoutes = [
   {
@@ -25,49 +19,14 @@ const favoriteRoutes = [
 
 export default function InicioPage() {
   return (
-    <main className="min-h-screen bg-[#f4f8fc] px-5 pb-24 pt-3 text-slate-950">
-      <section className="mx-auto w-full max-w-md">
-        <header className="flex items-start justify-between gap-4">
-          <button
-            type="button"
-            aria-label="NeoVIa"
-            className="flex min-w-0 items-center gap-2.5 rounded-2xl text-left focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
-          >
-            <span className="grid size-10 shrink-0 place-items-center rounded-2xl bg-brand-primary text-white shadow-sm">
-              <BusFront size={22} strokeWidth={2.5} />
-            </span>
-            <span className="truncate text-xl font-black tracking-[-0.05em] text-slate-950">
-              NeoVIa
-            </span>
-          </button>
+    <main className="min-h-screen bg-[#f4f8fc] px-5 pb-24 text-slate-950 md:px-8 md:pb-10 lg:px-10">
+      <section className="mx-auto w-full max-w-md md:max-w-6xl">
+        <AppTopBar
+          className="-mx-5 md:mx-0 md:rounded-b-[28px] md:px-6"
+          version="MVP v0.0.24"
+        />
 
-          <div className="flex flex-col items-end gap-1">
-            <div className="flex items-center gap-2">
-              <button
-                type="button"
-                aria-label="Notificacoes"
-                className="grid size-10 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
-              >
-                <Bell size={19} />
-              </button>
-              <button
-                type="button"
-                aria-label="Perfil"
-                className="grid size-10 place-items-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
-              >
-                <UserRound size={19} />
-              </button>
-            </div>
-            <Link
-              href="/versoes"
-              className="text-xs font-semibold text-[#d8e2ec] transition hover:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-300/40"
-            >
-              MVP v0.0.12
-            </Link>
-          </div>
-        </header>
-
-        <label className="mt-3 flex h-12 items-center gap-3 rounded-[20px] border border-slate-200 bg-white px-4 shadow-sm focus-within:ring-2 focus-within:ring-brand-primary/25">
+        <label className="mt-6 flex h-12 items-center gap-3 rounded-[20px] border border-slate-200 bg-white px-4 shadow-sm focus-within:ring-2 focus-within:ring-brand-primary/25 md:mt-8 md:h-14 md:max-w-3xl md:px-5">
           <Search className="text-brand-primary" size={20} />
           <input
             type="search"
@@ -76,65 +35,72 @@ export default function InicioPage() {
           />
         </label>
 
-        <section className="mt-4">
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
-            Rotas favoritas
-          </p>
+        <div className="md:mt-6 md:grid md:grid-cols-[minmax(0,1fr)_360px] md:items-start md:gap-5 lg:grid-cols-[minmax(0,1.1fr)_390px] lg:gap-6">
+          <section className="mt-4 md:mt-0">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
+              Rotas favoritas
+            </p>
 
-          <div className="mt-2 grid gap-2">
-            {favoriteRoutes.map((route) => (
-              <article
-                key={route.line}
-                className="flex h-[72px] items-center gap-2 rounded-[22px] border border-slate-200 bg-white p-3 shadow-sm"
-              >
-                <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-brand-primary/10 text-brand-primary">
-                  <BusFront size={22} />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <p className="text-[10px] font-black uppercase tracking-wide text-brand-primary">
-                    {route.line}
-                  </p>
-                  <h3 className="truncate text-sm font-black tracking-tighter">
-                    {route.title}
-                  </h3>
-                </div>
-                <div className="shrink-0 text-right">
-                  <span className="whitespace-nowrap rounded-full bg-emerald-50 px-2 py-1 text-[10px] font-black text-emerald-700">
-                    {route.time}
-                  </span>
-                  <p className="mt-1 whitespace-nowrap text-[10px] font-semibold text-slate-500">
-                    {route.points}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <p className="mt-3 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
-          Cartão
-        </p>
-
-        <section className="mt-2 rounded-[26px] bg-brand-primary p-4 text-white shadow-card">
-          <div className="flex items-center justify-between gap-4">
-            <div className="grid size-11 place-items-center rounded-xl bg-white text-brand-primary">
-              <CreditCard size={24} />
+            <div className="mt-2 grid gap-2 md:gap-3">
+              {favoriteRoutes.map((route) => (
+                <article
+                  key={route.line}
+                  className="flex h-[72px] items-center gap-2 rounded-[22px] border border-slate-200 bg-white p-3 shadow-sm md:h-[104px] md:gap-4 md:rounded-[26px] md:p-5"
+                >
+                  <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-brand-primary/10 text-brand-primary md:size-12 md:rounded-2xl">
+                    <BusFront size={22} />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[10px] font-black uppercase tracking-wide text-brand-primary">
+                      {route.line}
+                    </p>
+                    <h3 className="truncate text-sm font-black tracking-tighter text-[hsl(228.51deg_100%_19.94%)] md:text-lg">
+                      {route.title}
+                    </h3>
+                  </div>
+                  <div className="shrink-0 text-right">
+                    <span className="whitespace-nowrap rounded-full bg-emerald-50 px-2 py-1 text-[10px] font-black text-emerald-700 md:px-3 md:text-xs">
+                      {route.time}
+                    </span>
+                    <p className="mt-1 whitespace-nowrap text-[10px] font-semibold text-slate-500 md:text-xs">
+                      {route.points}
+                    </p>
+                  </div>
+                </article>
+              ))}
             </div>
-            <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-white/70">
-              Passe
-            </span>
+          </section>
+
+          <div className="mt-3 md:mt-0">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
+              Cartão
+            </p>
+
+            <section className="mt-2 rounded-[26px] bg-brand-primary p-4 text-white shadow-card md:p-6">
+              <div className="flex items-center justify-between gap-4">
+                <div className="grid size-11 place-items-center rounded-xl bg-white text-brand-primary md:size-12 md:rounded-2xl">
+                  <CreditCard size={24} />
+                </div>
+                <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-white/70">
+                  Passe
+                </span>
+              </div>
+              <p className="mt-3 text-sm font-semibold text-white/65 md:mt-6">
+                Valor restante no passe
+              </p>
+              <strong className="block text-4xl font-black tracking-[-0.08em] md:text-5xl">
+                R$ 42,80
+              </strong>
+              <Link
+                href="/recarga/pagamento"
+                className="mt-3 flex h-10 items-center justify-center gap-2 rounded-2xl bg-white/10 px-3 py-2 text-sm font-bold text-white/80 transition hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/70 md:mt-5 md:h-12"
+              >
+                <Plus size={17} strokeWidth={3} />
+                Recarregar cartão
+              </Link>
+            </section>
           </div>
-          <p className="mt-3 text-sm font-semibold text-white/65">
-            Valor restante no passe
-          </p>
-          <strong className="block text-4xl font-black tracking-[-0.08em]">
-            R$ 42,80
-          </strong>
-          <div className="mt-3 flex items-center gap-2 rounded-2xl bg-white/10 px-3 py-2 text-sm font-bold text-white/80">
-            <CalendarClock size={16} />
-            Ultima atualizacao hoje, 10:15
-          </div>
-        </section>
+        </div>
       </section>
 
     </main>

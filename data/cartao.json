@@ -1,0 +1,58 @@
+{
+  "card": {
+    "holder": "Gabriel Silva",
+    "numberMasked": "•••• 4821",
+    "balance": 42.8,
+    "lastUpdate": "Hoje, 10:15",
+    "category": "Cidadão",
+    "status": "Ativo",
+    "validUntil": "Dez/2027"
+  },
+  "rechargeOptions": [20, 30, 50, 100],
+  "paymentMethods": [
+    {
+      "id": "pix",
+      "title": "Pix",
+      "description": "Aprovação em até 5 minutos",
+      "feeLabel": "Sem taxa",
+      "feeValue": 0,
+      "availability": "Disponível 24h"
+    },
+    {
+      "id": "credit",
+      "title": "Cartão de crédito",
+      "description": "Visa, Mastercard ou Elo",
+      "feeLabel": "Taxa R$ 1,90",
+      "feeValue": 1.9,
+      "availability": "Confirmação imediata"
+    },
+    {
+      "id": "debit",
+      "title": "Débito online",
+      "description": "Principais bancos conectados",
+      "feeLabel": "Sem taxa",
+      "feeValue": 0,
+      "availability": "Confirmação em minutos"
+    }
+  ],
+  "recentTransactions": [
+    {
+      "title": "Linha 012 - Centro",
+      "date": "Hoje, 08:24",
+      "value": -5.2,
+      "type": "debit"
+    },
+    {
+      "title": "Recarga via Pix",
+      "date": "12 jun, 18:42",
+      "value": 30,
+      "type": "credit"
+    },
+    {
+      "title": "Linha 063 - Barreiros",
+      "date": "12 jun, 07:51",
+      "value": -5.2,
+      "type": "debit"
+    }
+  ]
+}
