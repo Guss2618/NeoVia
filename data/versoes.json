@@ -144,5 +144,14 @@
       "Menu superior com logo, notificacoes e perfil removido da pagina de pagamento.",
       "Textos escuros da pagina de pagamento atualizados para os tons azuis usados na tela inicial."
     ]
+  },
+  {
+    "versao": "MVP v0.0.18",
+    "data": "2026-06-25",
+    "alteracoes": [
+      "Componente Proxima recarga removido da pagina de pagamento de recarga.",
+      "Grade da pagina de pagamento ajustada para exibir apenas escolha de valor, metodo de pagamento e botao de acao.",
+      "Espacamento entre os elementos da pagina de pagamento ampliado sem reintroduzir rolagem desnecessaria."
+    ]
   }
 ]

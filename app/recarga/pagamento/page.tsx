@@ -10,18 +10,12 @@ import {
   Landmark,
   Loader2,
   QrCode,
-  ReceiptText,
   ShieldCheck,
   Smartphone,
 } from "lucide-react";
 import Link from "next/link";
 import type { ChangeEvent } from "react";
-import { useEffect, useMemo, useState } from "react";
-
-type CardInfo = {
-  balance: number;
-  numberMasked: string;
-};
+import { useEffect, useState } from "react";
 
 type PaymentMethod = {
   id: "pix" | "credit" | "debit";
@@ -33,7 +27,6 @@ type PaymentMethod = {
 };
 
 type CardData = {
-  card: CardInfo;
   rechargeOptions: number[];
   paymentMethods: PaymentMethod[];
 };
@@ -89,19 +82,6 @@ export default function PagamentoRecargaPage() {
     };
   }, []);
 
-  const selectedPayment = useMemo(
-    () =>
-      cardData?.paymentMethods.find((method) => method.id === selectedMethod) ??
-      null,
-    [cardData, selectedMethod],
-  );
-  const feeValue = selectedPayment?.feeValue ?? 0;
-  const totalValue = selectedAmount + feeValue;
-  const balanceAfterRecharge = (cardData?.card.balance ?? 0) + selectedAmount;
-  const SelectedPaymentIcon = selectedPayment
-    ? getPaymentIcon(selectedPayment.id)
-    : CreditCard;
-
   function handleQuickAmount(amount: number) {
     setSelectedAmount(amount);
     setCustomAmount("");
@@ -150,46 +130,7 @@ export default function PagamentoRecargaPage() {
             </div>
           </section>
         ) : (
-          <div className="mt-2 grid gap-2 lg:grid-cols-[0.9fr_1.1fr_1fr] lg:items-start">
-            <section className="rounded-[20px] bg-brand-primary p-3 text-white shadow-card">
-              <div className="flex items-center justify-between gap-3">
-                <div>
-                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-white/55">
-                    Próxima recarga
-                  </p>
-                  <h2 className="mt-0.5 text-lg font-black tracking-[-0.04em]">
-                    {formatCurrency(selectedAmount)}
-                  </h2>
-                </div>
-                <div className="grid size-9 place-items-center rounded-xl bg-white text-brand-primary">
-                  <ReceiptText size={20} />
-                </div>
-              </div>
-
-              <dl className="mt-2 grid grid-cols-2 gap-2 text-xs">
-                <div className="rounded-2xl bg-white/10 px-3 py-2">
-                  <dt className="font-bold text-white/65">Saldo atual</dt>
-                  <dd className="mt-0.5 font-black">
-                    {formatCurrency(cardData.card.balance)}
-                  </dd>
-                </div>
-                <div className="rounded-2xl bg-white/10 px-3 py-2">
-                  <dt className="font-bold text-white/65">Taxas</dt>
-                  <dd className="mt-0.5 font-black">{formatCurrency(feeValue)}</dd>
-                </div>
-                <div className="rounded-2xl bg-white px-3 py-2 text-brand-primary">
-                  <dt className="font-black">Total</dt>
-                  <dd className="mt-0.5 font-black">{formatCurrency(totalValue)}</dd>
-                </div>
-                <div className="rounded-2xl bg-white/10 px-3 py-2">
-                  <dt className="font-bold text-white/65">Saldo após</dt>
-                  <dd className="mt-0.5 font-black">
-                    {formatCurrency(balanceAfterRecharge)}
-                  </dd>
-                </div>
-              </dl>
-            </section>
-
+          <div className="mt-3 grid gap-3 lg:grid-cols-2 lg:items-start">
             <section className="rounded-[20px] border border-slate-200 bg-white p-3 shadow-sm">
               <div className="flex items-center justify-between gap-3">
                 <div>
@@ -205,7 +146,7 @@ export default function PagamentoRecargaPage() {
                 </div>
               </div>
 
-              <div className="mt-2 grid grid-cols-4 gap-2">
+              <div className="mt-3 grid grid-cols-4 gap-2">
                 {cardData.rechargeOptions.map((amount) => {
                   const isSelected = selectedAmount === amount && !customAmount;
 
@@ -232,7 +173,7 @@ export default function PagamentoRecargaPage() {
                 })}
               </div>
 
-              <label className="mt-2 flex h-11 items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 focus-within:border-brand-primary focus-within:ring-2 focus-within:ring-brand-primary/20">
+              <label className="mt-3 flex h-11 items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 focus-within:border-brand-primary focus-within:ring-2 focus-within:ring-brand-primary/20">
                 <span className="text-sm font-black text-brand-primary">R$</span>
                 <input
                   type="number"
@@ -262,7 +203,7 @@ export default function PagamentoRecargaPage() {
                 </div>
               </div>
 
-              <div className="mt-2 grid gap-2">
+              <div className="mt-3 grid gap-2">
                 {cardData.paymentMethods.map((method) => {
                   const Icon = getPaymentIcon(method.id);
                   const isSelected = selectedMethod === method.id;
@@ -310,7 +251,7 @@ export default function PagamentoRecargaPage() {
               </div>
             </section>
 
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-2">
               <button
                 type="button"
                 disabled={selectedAmount <= 0}
@@ -320,7 +261,7 @@ export default function PagamentoRecargaPage() {
                 <ArrowRight size={19} />
               </button>
 
-              <div className="mt-1.5 flex items-center justify-center gap-2 rounded-2xl bg-emerald-50 px-3 py-1.5 text-[11px] font-black text-emerald-700">
+              <div className="mt-2 flex items-center justify-center gap-2 rounded-2xl bg-emerald-50 px-3 py-1.5 text-[11px] font-black text-emerald-700">
                 <ShieldCheck size={15} />
                 Pagamento protegido no ambiente NeoVIa
               </div>

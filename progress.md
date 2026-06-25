@@ -150,3 +150,13 @@
 - Versao do sistema atualizada para MVP v0.0.17 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
 - Build de producao validado com `npm run build` apos os ajustes visuais da pagina de pagamento.
 - Rotas locais `/recarga/pagamento`, `/recarga` e `/versoes` validadas com status 200.
+
+## MVP v0.0.18
+
+- Iniciada a remocao do componente de proxima recarga da pagina `/recarga/pagamento`.
+- Componente de proxima recarga removido da pagina `/recarga/pagamento`, incluindo imports e calculos usados somente por esse bloco.
+- Grade da pagina de pagamento ajustada para duas colunas no desktop e dois blocos empilhados no mobile: escolha de valor e metodo de pagamento.
+- Espacamento entre elementos da tela de pagamento aumentado de forma moderada, mantendo a estrutura compacta para caber junto ao menu inferior.
+- Versao do sistema atualizada para MVP v0.0.18 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
+- Build de producao validado com `npm run build` apos a remocao do componente.
+- Rotas locais `/recarga/pagamento`, `/recarga` e `/versoes` validadas com status 200.
