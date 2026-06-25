@@ -47,7 +47,7 @@ export default function Home() {
             href="/versoes"
             className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white/80 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/80"
           >
-            MVP v0.0.22
+            MVP v0.0.23
           </Link>
         </header>
 

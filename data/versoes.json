@@ -191,5 +191,13 @@
       "Menu inferior e lateral removido da pagina de historico de versoes.",
       "Deslocamento lateral removido da pagina de historico de versoes no desktop."
     ]
+  },
+  {
+    "versao": "MVP v0.0.23",
+    "data": "2026-06-25",
+    "alteracoes": [
+      "Imports de icones da pagina de pagamento de recarga corrigidos para restaurar o build.",
+      "Historico de versoes atualizado para exibir a MVP v0.0.23."
+    ]
   }
 ]

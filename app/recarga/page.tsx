@@ -70,7 +70,7 @@ export default function RecargaPage() {
       <section className="mx-auto w-full max-w-4xl">
         <AppTopBar
           className="-mx-5 sm:-mx-8 sm:px-8"
-          version="MVP v0.0.22"
+          version="MVP v0.0.23"
         />
 
         {!cardData ? (

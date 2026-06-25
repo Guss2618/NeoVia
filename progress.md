@@ -210,3 +210,12 @@
 - Versao do sistema atualizada para MVP v0.0.22 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
 - Build de producao validado com `npm run build` apos os ajustes de carregamento, historico, extrato e menu de versoes.
 - Rotas locais `/`, `/versoes`, `/recarga` e `/inicio` validadas com status 200.
+
+## MVP v0.0.23
+
+- Iniciada a padronizacao dos componentes da tela `/recarga/pagamento` para manter no maximo um titulo por bloco.
+- Iniciada a correcao do codigo atual para restaurar o funcionamento correto do projeto.
+- Imports `Banknote` e `Smartphone` restaurados na pagina `/recarga/pagamento`, corrigindo o erro de TypeScript que quebrava o build.
+- Historico local de versoes atualizado em `data/versoes.json` com a MVP v0.0.23.
+- Build de producao validado com `npm run build` apos a correcao.
+- Rotas locais `/recarga/pagamento`, `/api/cartao` e `/inicio` validadas com status 200.

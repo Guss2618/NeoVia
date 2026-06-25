@@ -23,7 +23,7 @@ export default function InicioPage() {
       <section className="mx-auto w-full max-w-md md:max-w-6xl">
         <AppTopBar
           className="-mx-5 md:mx-0 md:rounded-b-[28px] md:px-6"
-          version="MVP v0.0.22"
+          version="MVP v0.0.23"
         />
 
         <label className="mt-6 flex h-12 items-center gap-3 rounded-[20px] border border-slate-200 bg-white px-4 shadow-sm focus-within:ring-2 focus-within:ring-brand-primary/25 md:mt-8 md:h-14 md:max-w-3xl md:px-5">
