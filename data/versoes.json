@@ -151,7 +151,10 @@
     "alteracoes": [
       "Componente Proxima recarga removido da pagina de pagamento de recarga.",
       "Grade da pagina de pagamento ajustada para exibir apenas escolha de valor, metodo de pagamento e botao de acao.",
-      "Espacamento entre os elementos da pagina de pagamento ampliado sem reintroduzir rolagem desnecessaria."
+      "Espacamento entre os elementos da pagina de pagamento ampliado sem reintroduzir rolagem desnecessaria.",
+      "Menu inferior e deslocamento lateral removidos da tela default /, preservando a navegacao nas demais rotas.",
+      "Tela inicial adaptada para desktop com largura ampliada e organizacao em colunas.",
+      "Menu inferior passa a funcionar como menu lateral esquerdo em telas maiores, mantendo o rodape no mobile."
     ]
   }
 ]

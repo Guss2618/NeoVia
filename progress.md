@@ -154,9 +154,16 @@
 ## MVP v0.0.18
 
 - Iniciada a remocao do componente de proxima recarga da pagina `/recarga/pagamento`.
+- Iniciada a adaptacao responsiva da tela inicial para desktop com menu lateral em telas maiores.
 - Componente de proxima recarga removido da pagina `/recarga/pagamento`, incluindo imports e calculos usados somente por esse bloco.
 - Grade da pagina de pagamento ajustada para duas colunas no desktop e dois blocos empilhados no mobile: escolha de valor e metodo de pagamento.
 - Espacamento entre elementos da tela de pagamento aumentado de forma moderada, mantendo a estrutura compacta para caber junto ao menu inferior.
 - Versao do sistema atualizada para MVP v0.0.18 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
 - Build de producao validado com `npm run build` apos a remocao do componente.
 - Rotas locais `/recarga/pagamento`, `/recarga` e `/versoes` validadas com status 200.
+- Iniciada a remocao do menu inferior da tela default `/`.
+- Menu inferior removido da tela default `/` por condicao de rota em `BottomNav`.
+- Deslocamento lateral do conteudo ajustado para nao ser aplicado na tela default `/`.
+- Historico de versoes atualizado com a remocao do menu inferior na tela default.
+- Build de producao validado com `npm run build` apos a remocao do menu inferior da tela default.
+- Rotas locais `/` e `/inicio` validadas: `/` sem menu inferior e sem deslocamento lateral; `/inicio` mantendo a navegacao.

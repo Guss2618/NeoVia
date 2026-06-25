@@ -28,7 +28,7 @@ const features = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_32%),linear-gradient(145deg,#0a2b52_0%,#0f3f74_52%,#071f3d_100%)] px-5 pb-28 pt-6 text-white sm:px-8">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_32%),linear-gradient(145deg,#0a2b52_0%,#0f3f74_52%,#071f3d_100%)] px-5 pb-6 pt-6 text-white sm:px-8 sm:pb-8">
       <section className="mx-auto flex min-h-[calc(100vh-48px)] w-full max-w-6xl flex-col justify-between gap-10">
         <header className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
