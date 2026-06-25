@@ -120,3 +120,12 @@
 - Versao do sistema atualizada para MVP v0.0.14 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
 - Build de producao validado com `npm run build` apos o ajuste de cor das rotas favoritas.
 - Rota local `/inicio` validada com status 200 e HTML contendo a nova classe de cor das rotas favoritas.
+
+## MVP v0.0.15
+
+- Iniciada a criacao da experiencia de recarga de cartao com saldo atual, valores de deposito e metodos de pagamento.
+- Pagina `/recarga` reformulada com saldo atual, selecao de valores de deposito, selecao de metodo de pagamento, resumo de taxas e saldo apos recarga.
+- Dados da recarga adicionados em `data/cartao.json` e expostos pela API Route `/api/cartao`.
+- Versao do sistema atualizada para MVP v0.0.15 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
+- Build de producao validado com `npm run build` apos a criacao da pagina de recarga.
+- Rotas locais `/recarga` e `/versoes` validadas com status 200; API local `/api/cartao` validada com dados de saldo, valores e metodos de pagamento.

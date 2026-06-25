@@ -117,5 +117,13 @@
     "alteracoes": [
       "Nomes das rotas favoritas na tela inicial atualizados para a cor hsl(228.51deg 100% 19.94%)."
     ]
+  },
+  {
+    "versao": "MVP v0.0.15",
+    "data": "2026-06-25",
+    "alteracoes": [
+      "Pagina de recarga do cartao criada com saldo atual, valores predefinidos de deposito e metodos de pagamento.",
+      "Dados da recarga movidos para JSON local consumido pela API Route /api/cartao."
+    ]
   }
 ]
