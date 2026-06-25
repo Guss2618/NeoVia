@@ -242,3 +242,4 @@
 - Corrigida acentuação em textos visíveis ao usuário nas páginas de horários, início, rotas, versões e histórico de versões.
 - Adicionada transição suave ao clicar em Escolha sua rota na tela inicial, levando para `/rotas` com overlay animado.
 - Rotas favoritas e card de cartão na tela inicial passam a usar transição suave para `/horarios` e `/recarga`, mantendo o botão Recarregar cartão em `/recarga/pagamento`.
+- Criado `README.md` com apresentação simples do projeto e passo a passo para execução local.
