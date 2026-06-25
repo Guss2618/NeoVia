@@ -34,7 +34,7 @@ export function AppTopBar({ className = "", version }: AppTopBarProps) {
       <div className="flex shrink-0 items-center gap-2">
         <button
           type="button"
-          aria-label="Notificacoes"
+          aria-label="Notificações"
           className="grid size-10 place-items-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-slate-200 hover:text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/20"
         >
           <Bell size={19} />

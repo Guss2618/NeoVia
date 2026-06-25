@@ -163,7 +163,7 @@ function rotasDiretas(
     const chegadaDestino = chegada + walk2Km * MIN_POR_KM_PE;
 
     const etapas: Etapa[] = [
-      etapaCaminhada("Sua localizacao", linha.paradas[bi].nome, origem, linha.paradas[bi]),
+      etapaCaminhada("Sua localização", linha.paradas[bi].nome, origem, linha.paradas[bi]),
       etapaBus,
       etapaCaminhada(linha.paradas[ai].nome, "Destino", linha.paradas[ai], destino),
     ];
@@ -242,7 +242,7 @@ function rotasComBaldeacao(
 
         const etapas: Etapa[] = [
           etapaCaminhada(
-            "Sua localizacao",
+            "Sua localização",
             linhaA.paradas[bi].nome,
             origem,
             linhaA.paradas[bi],

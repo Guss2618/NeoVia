@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "NeoVIa",
-  description: "Plataforma unificada de acesso digital ao transporte publico.",
+  description: "Plataforma unificada de acesso digital ao transporte público.",
 };
 
 export const viewport: Viewport = {

@@ -3,15 +3,15 @@
     "versao": "MVP v0.0.1",
     "data": "2026-06-11",
     "alteracoes": [
-      "Criada a primeira tela de carregamento web estatica com fundo azul escuro, card central e icone de onibus."
+      "Criada a primeira tela de carregamento web estática com fundo azul escuro, card central e ícone de ônibus."
     ]
   },
   {
     "versao": "MVP v0.0.2",
     "data": "2026-06-11",
     "alteracoes": [
-      "Criada uma base Expo temporaria para testes no Expo Go.",
-      "Corrigido carregamento inicial do Expo Go durante a validacao mobile."
+      "Criada uma base Expo temporária para testes no Expo Go.",
+      "Corrigido carregamento inicial do Expo Go durante a validação mobile."
     ]
   },
   {
@@ -19,8 +19,8 @@
     "data": "2026-06-11",
     "alteracoes": [
       "Projeto recriado com React, Next.js, Tailwind CSS e Lucide React.",
-      "Adicionada tela inicial mobile-first com indicador de versao clicavel.",
-      "Adicionada API Route para leitura do historico de versoes a partir de JSON local."
+      "Adicionada tela inicial mobile-first com indicador de versão clicável.",
+      "Adicionada API Route para leitura do histórico de versões a partir de JSON local."
     ]
   },
   {
@@ -28,18 +28,18 @@
     "data": "2026-06-11",
     "alteracoes": [
       "Removido o componente de tela de carregamento da tela inicial.",
-      "Adicionado botao Começar levando para a pagina inicial da plataforma.",
-      "Criadas paginas iniciais dos modulos Horarios, Recarga e Rotas."
+      "Adicionado botão Começar levando para a página inicial da plataforma.",
+      "Criadas páginas iniciais dos módulos Horários, Recarga e Rotas."
     ]
   },
   {
     "versao": "MVP v0.0.5",
     "data": "2026-06-11",
     "alteracoes": [
-      "Pagina inicial da plataforma reformulada com estrutura mobile-first.",
-      "Adicionado campo Escolha sua rota com icone de lupa no topo.",
+      "Página inicial da plataforma reformulada com estrutura mobile-first.",
+      "Adicionado campo Escolha sua rota com ícone de lupa no topo.",
       "Adicionados dois cards de rotas favoritas e card de saldo restante no passe.",
-      "Adicionado menu inferior fixo com as opcoes Inicio, Cartao, Horarios e Rotas."
+      "Adicionado menu inferior fixo com as opções Início, Cartão, Horários e Rotas."
     ]
   },
   {
@@ -47,27 +47,27 @@
     "data": "2026-06-11",
     "alteracoes": [
       "Menu inferior movido para componente compartilhado.",
-      "Menu inferior fixo adicionado ao layout global para aparecer em todas as paginas.",
-      "Ajustado espacamento inferior das paginas para evitar sobreposicao do menu."
+      "Menu inferior fixo adicionado ao layout global para aparecer em todas as páginas.",
+      "Ajustado espaçamento inferior das páginas para evitar sobreposição do menu."
     ]
   },
   {
     "versao": "MVP v0.0.7",
     "data": "2026-06-15",
     "alteracoes": [
-      "Pagina de cartao reformulada com replica visual do passe e saldo no topo.",
-      "Adicionados botao de recarga em destaque, opcao de gerar extrato e dados do cartao.",
-      "Adicionado resumo de movimentacoes recentes.",
-      "Botao de versao MVP na tela inicial ajustado para aparecer como texto discreto."
+      "Página de cartão reformulada com réplica visual do passe e saldo no topo.",
+      "Adicionados botão de recarga em destaque, opção de gerar extrato e dados do cartão.",
+      "Adicionado resumo de movimentações recentes.",
+      "Botão de versão MVP na tela inicial ajustado para aparecer como texto discreto."
     ]
   },
   {
     "versao": "MVP v0.0.8",
     "data": "2026-06-16",
     "alteracoes": [
-      "Cabecalho da tela inicial atualizado com logotipo da plataforma no canto superior esquerdo.",
-      "Adicionados botoes falsos de notificacoes e perfil no canto superior direito.",
-      "Removidos os textos Bom dia e NeoVIa do antigo cabecalho da tela inicial."
+      "Cabeçalho da tela inicial atualizado com logotipo da plataforma no canto superior esquerdo.",
+      "Adicionados botões falsos de notificações e perfil no canto superior direito.",
+      "Removidos os textos Bom dia e NeoVIa do antigo cabeçalho da tela inicial."
     ]
   },
   {
@@ -75,40 +75,40 @@
     "data": "2026-06-16",
     "alteracoes": [
       "Menu superior da tela inicial atualizado com fundo branco.",
-      "Cores do logotipo, botoes de notificacoes e perfil ajustadas para manter contraste no novo fundo.",
-      "Indicador de versao mantido discreto no cabecalho branco."
+      "Cores do logotipo, botões de notificações e perfil ajustadas para manter contraste no novo fundo.",
+      "Indicador de versão mantido discreto no cabeçalho branco."
     ]
   },
   {
     "versao": "MVP v0.0.10",
     "data": "2026-06-16",
     "alteracoes": [
-      "Texto de versao MVP reposicionado no centro do menu superior, entre a logo e os icones de notificacoes e perfil.",
-      "Layout do cabecalho ajustado para manter os tres grupos alinhados na mesma linha."
+      "Texto de versão MVP reposicionado no centro do menu superior, entre a logo e os ícones de notificações e perfil.",
+      "Layout do cabeçalho ajustado para manter os três grupos alinhados na mesma linha."
     ]
   },
   {
     "versao": "MVP v0.0.11",
     "data": "2026-06-16",
     "alteracoes": [
-      "Menu superior compartilhado adicionado tambem a pagina de cartao.",
-      "Distancia entre o menu superior e o input Escolha sua rota aumentada na tela inicial.",
-      "Cabecalho superior extraido para componente reutilizavel."
+      "Menu superior compartilhado adicionado também a página de cartão.",
+      "Distância entre o menu superior e o input Escolha sua rota aumentada na tela inicial.",
+      "Cabeçalho superior extraído para componente reutilizável."
     ]
   },
   {
     "versao": "MVP v0.0.12",
     "data": "2026-06-16",
     "alteracoes": [
-      "Texto de ultima atualizacao no card de cartao da tela inicial substituido por botao Recarregar cartao.",
-      "Botao Recarregar cartao da tela inicial passa a levar para a pagina de cartao."
+      "Texto de última atualização no card de cartão da tela inicial substituído por botão Recarregar cartão.",
+      "Botão Recarregar cartão da tela inicial passa a levar para a página de cartão."
     ]
   },
   {
     "versao": "MVP v0.0.13",
     "data": "2026-06-16",
     "alteracoes": [
-      "Botao Recarregar cartao no card da tela inicial ajustado com o mesmo fundo e cor de texto do indicador de ultima atualizacao da pagina de cartao."
+      "Botão Recarregar cartão no card da tela inicial ajustado com o mesmo fundo e cor de texto do indicador de última atualização da página de cartão."
     ]
   },
   {
@@ -122,92 +122,101 @@
     "versao": "MVP v0.0.15",
     "data": "2026-06-25",
     "alteracoes": [
-      "Pagina de recarga do cartao criada com saldo atual, valores predefinidos de deposito e metodos de pagamento.",
-      "Dados da recarga movidos para JSON local consumido pela API Route /api/cartao."
+      "Página de recarga do cartão criada com saldo atual, valores predefinidos de depósito e métodos de pagamento.",
+      "Dados da recarga movidos para JSON local consumido pela API Route /api/cartão."
     ]
   },
   {
     "versao": "MVP v0.0.16",
     "data": "2026-06-25",
     "alteracoes": [
-      "Criada pagina especifica /recarga/pagamento para escolha de valor e metodo de pagamento.",
+      "Criada página específica /recarga/pagamento para escolha de valor e método de pagamento.",
       "Adicionado input de valor personalizado no fluxo de recarga.",
-      "Botao Realizar recarga da area do cartao e atalho da tela inicial apontam para a nova pagina de pagamento.",
-      "Menu inferior ocultado na pagina de pagamento para priorizar a visualizacao dos componentes sem rolagem."
+      "Botão Realizar recarga da área do cartão e atalho da tela inicial apontam para a nova página de pagamento.",
+      "Menu inferior ocultado na página de pagamento para priorizar a visualização dos componentes sem rolagem."
     ]
   },
   {
     "versao": "MVP v0.0.17",
     "data": "2026-06-25",
     "alteracoes": [
-      "Menu inferior mantido na pagina de pagamento de recarga.",
-      "Menu superior com logo, notificacoes e perfil removido da pagina de pagamento.",
-      "Textos escuros da pagina de pagamento atualizados para os tons azuis usados na tela inicial."
+      "Menu inferior mantido na página de pagamento de recarga.",
+      "Menu superior com logo, notificações e perfil removido da página de pagamento.",
+      "Textos escuros da página de pagamento atualizados para os tons azuis usados na tela inicial."
     ]
   },
   {
     "versao": "MVP v0.0.18",
     "data": "2026-06-25",
     "alteracoes": [
-      "Componente Proxima recarga removido da pagina de pagamento de recarga.",
-      "Grade da pagina de pagamento ajustada para exibir apenas escolha de valor, metodo de pagamento e botao de acao.",
-      "Espacamento entre os elementos da pagina de pagamento ampliado sem reintroduzir rolagem desnecessaria.",
-      "Menu inferior e deslocamento lateral removidos da tela default /, preservando a navegacao nas demais rotas.",
-      "Tela inicial adaptada para desktop com largura ampliada e organizacao em colunas.",
-      "Menu inferior passa a funcionar como menu lateral esquerdo em telas maiores, mantendo o rodape no mobile."
+      "Componente Próxima recarga removido da página de pagamento de recarga.",
+      "Grade da página de pagamento ajustada para exibir apenas escolha de valor, método de pagamento e botão de ação.",
+      "Espaçamento entre os elementos da página de pagamento ampliado sem reintroduzir rolagem desnecessária.",
+      "Menu inferior e deslocamento lateral removidos da tela default /, preservando a navegação nas demais rotas.",
+      "Tela inicial adaptada para desktop com largura ampliada e organização em colunas.",
+      "Menu inferior passa a funcionar como menu lateral esquerdo em telas maiores, mantendo o rodapé no mobile."
     ]
   },
   {
     "versao": "MVP v0.0.19",
     "data": "2026-06-25",
     "alteracoes": [
-      "Cabecalho secundario da pagina de recarga removido.",
-      "Fontes escuras da pagina de recarga harmonizadas com o azul usado na tela inicial.",
-      "Titulos Informacoes e Historico reposicionados acima dos componentes, seguindo o padrao da tela inicial."
+      "Cabeçalho secundário da página de recarga removido.",
+      "Fontes escuras da página de recarga harmonizadas com o azul usado na tela inicial.",
+      "Títulos Informações e Histórico reposicionados acima dos componentes, seguindo o padrão da tela inicial."
     ]
   },
   {
     "versao": "MVP v0.0.20",
     "data": "2026-06-25",
     "alteracoes": [
-      "Componente Gerar extrato movido para depois dos demais componentes da pagina de recarga.",
-      "Titulo externo Informacoes renomeado para Dados do cartao.",
-      "Titulo interno do card de dados do cartao removido."
+      "Componente Gerar extrato movido para depois dos demais componentes da página de recarga.",
+      "Título externo Informações renomeado para Dados do cartão.",
+      "Título interno do card de dados do cartão removido."
     ]
   },
   {
     "versao": "MVP v0.0.21",
     "data": "2026-06-25",
     "alteracoes": [
-      "Titulo interno Movimentacoes recentes removido do componente de historico.",
-      "Componente Gerar extrato atualizado com titulo externo e conteudo interno simplificado."
+      "Título interno Movimentações recentes removido do componente de histórico.",
+      "Componente Gerar extrato atualizado com título externo e conteúdo interno simplificado."
     ]
   },
   {
     "versao": "MVP v0.0.22",
     "data": "2026-06-25",
     "alteracoes": [
-      "Tela de carregamento com a marca NeoVIa adicionada ao clicar em Comecar na pagina inicial default.",
-      "Menu inferior e lateral removido da pagina de historico de versoes.",
-      "Deslocamento lateral removido da pagina de historico de versoes no desktop."
+      "Tela de carregamento com a marca NeoVIa adicionada ao clicar em Começar na página inicial default.",
+      "Menu inferior e lateral removido da página de histórico de versões.",
+      "Deslocamento lateral removido da página de histórico de versões no desktop."
     ]
   },
   {
     "versao": "MVP v0.0.23",
     "data": "2026-06-25",
     "alteracoes": [
-      "Imports de icones da pagina de pagamento de recarga corrigidos para restaurar o build.",
-      "Historico de versoes atualizado para exibir a MVP v0.0.23."
+      "Imports de ícones da página de pagamento de recarga corrigidos para restaurar o build.",
+      "Histórico de versões atualizado para exibir a MVP v0.0.23."
     ]
   },
   {
     "versao": "MVP v0.0.24",
     "data": "2026-06-25",
     "alteracoes": [
-      "Tela de rotas com mapa interativo Leaflet, origem/destino e busca de endereco.",
-      "Roteamento por onibus com linha direta ou baldeacao, trechos a pe pelas ruas e preco estimado.",
-      "Pontos e linhas de onibus extraidos do OpenStreetMap com APIs de geocoding e caminhada.",
-      "Corrigido scroll da pagina ao arrastar o mapa no mobile."
+      "Tela de rotas com mapa interativo Leaflet, origem/destino e busca de endereço.",
+      "Roteamento por ônibus com linha direta ou baldeação, trechos a pé pelas ruas e preço estimado.",
+      "Pontos e linhas de ônibus extraídos do OpenStreetMap com APIs de geocoding e caminhada.",
+      "Corrigido scroll da página ao arrastar o mapa no mobile."
+    ]
+  },
+  {
+    "versao": "MVP v0.0.25",
+    "data": "2026-06-25",
+    "alteracoes": [
+      "Página de horários reformulada com menu superior, busca por nome e lista de linhas.",
+      "Criadas APIs /api/linhas e /api/linhas/[id] consumindo data/linhas.json e data/tarifas.json.",
+      "Adicionada página individual por linha com horários de partida, tarifas e paradas."
     ]
   }
 ]

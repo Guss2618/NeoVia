@@ -11,18 +11,18 @@ import { StartLoadingLink } from "../components/StartLoadingLink";
 
 const features = [
   {
-    title: "Horarios",
-    description: "Consulte saidas das linhas de forma rapida e acessivel.",
+    title: "Horários",
+    description: "Consulte saídas das linhas de forma rápida e acessível.",
     icon: Clock3,
   },
   {
     title: "Recarga",
-    description: "Prepare recargas online para o cartao de transporte.",
+    description: "Prepare recargas online para o cartão de transporte.",
     icon: CreditCard,
   },
   {
     title: "Rotas",
-    description: "Veja quais linhas ajudam voce a chegar ao destino.",
+    description: "Veja quais linhas ajudam você a chegar ao destino.",
     icon: Route,
   },
 ];
@@ -47,7 +47,7 @@ export default function Home() {
             href="/versoes"
             className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white/80 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/80"
           >
-            MVP v0.0.24
+            MVP v0.0.25
           </Link>
         </header>
 
@@ -55,14 +55,14 @@ export default function Home() {
           <section className="max-w-3xl">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white/80">
               <MapPinned size={18} />
-              Transporte publico mais simples
+              Transporte público mais simples
             </div>
             <h2 className="text-5xl font-black leading-[0.95] tracking-[-0.08em] sm:text-7xl">
-              Sua cidade conectada em uma unica plataforma.
+              Sua cidade conectada em uma única plataforma.
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/75">
-              Consulte horarios, planeje rotas e acompanhe recursos de recarga
-              em uma experiencia mobile-first feita para funcionar bem tambem no
+              Consulte horários, planeje rotas e acompanhe recursos de recarga
+              em uma experiência mobile-first feita para funcionar bem também no
               PC.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -77,7 +77,7 @@ export default function Home() {
                 href="/versoes"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 px-6 py-3 text-base font-bold text-white/80 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/80"
               >
-                Ver versoes
+                Ver versões
               </Link>
             </div>
             <div className="mt-10 grid gap-3 sm:grid-cols-3">

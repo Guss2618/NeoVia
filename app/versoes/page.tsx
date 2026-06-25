@@ -45,7 +45,7 @@ export default function VersoesPage() {
                 NeoVIa
               </p>
               <h1 className="text-3xl font-black tracking-[-0.06em] sm:text-5xl">
-                Historico de versoes
+                Histórico de versões
               </h1>
             </div>
           </div>

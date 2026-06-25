@@ -230,3 +230,15 @@
 - Corrigido conflito de scroll no mobile ao arrastar o mapa (`touch-action: none` e isolamento de toques).
 - Versao do sistema atualizada para MVP v0.0.24 em `agents.md`, tela inicial e historico de versoes.
 - Build de producao validado com `npm run build` apos a integracao do modulo de rotas.
+
+## MVP v0.0.25
+
+- Iniciada a reformulacao da pagina `/horarios` com menu superior, busca e lista de linhas.
+- Pagina `/horarios` reformulada com `AppTopBar`, input de busca e cards no estilo das rotas favoritas da tela inicial.
+- Criadas API Routes `/api/linhas` e `/api/linhas/[id]` consumindo `data/linhas.json` e `data/tarifas.json`.
+- Adicionada pagina `/horarios/[id]` com horarios de partida, tarifas e paradas da linha selecionada.
+- Versao do sistema atualizada para MVP v0.0.25 em `agents.md`, tela inicial e historico de versoes.
+- Ajustada responsividade dos cards de linha em `/horarios` no mobile com layout em duas linhas e contencao de overflow.
+- Corrigida acentuação em textos visíveis ao usuário nas páginas de horários, início, rotas, versões e histórico de versões.
+- Adicionada transição suave ao clicar em Escolha sua rota na tela inicial, levando para `/rotas` com overlay animado.
+- Rotas favoritas e card de cartão na tela inicial passam a usar transição suave para `/horarios` e `/recarga`, mantendo o botão Recarregar cartão em `/recarga/pagamento`.

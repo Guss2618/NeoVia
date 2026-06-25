@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
@@ -54,6 +55,9 @@ function formatarEndereco(endereco: string) {
 }
 
 export function RotasView() {
+  const searchParams = useSearchParams();
+  const entradaSuave = searchParams.get("entrada") === "1";
+  const buscaInputRef = useRef<HTMLInputElement>(null);
   const [campoAtivo, setCampoAtivo] = useState<Campo>("origem");
   const [origem, setOrigem] = useState<Local | null>(null);
   const [destino, setDestino] = useState<Local | null>(null);
@@ -76,6 +80,22 @@ export function RotasView() {
   useEffect(() => {
     setMontado(true);
   }, []);
+
+  useEffect(() => {
+    if (!entradaSuave) {
+      return;
+    }
+
+    setCampoAtivo("destino");
+
+    const focusTimer = window.setTimeout(() => {
+      buscaInputRef.current?.focus();
+    }, 120);
+
+    return () => {
+      window.clearTimeout(focusTimer);
+    };
+  }, [entradaSuave]);
 
   useEffect(() => {
     if (busca.trim().length < 3) {
@@ -251,7 +271,11 @@ export function RotasView() {
   const localAtual = campoAtivo === "origem" ? origem : destino;
 
   return (
-    <main className="flex min-h-screen flex-col bg-[#f4f8fc] text-slate-950">
+    <main
+      className={`flex min-h-screen flex-col bg-[#f4f8fc] text-slate-950${
+        entradaSuave ? " page-enter" : ""
+      }`}
+    >
       <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-4 pb-28 pt-5 sm:px-6">
         <Link
           href="/inicio"
@@ -262,7 +286,7 @@ export function RotasView() {
         </Link>
 
         <h1 className="mt-4 text-2xl font-black tracking-tight">
-          Para onde voce quer ir?
+          Para onde você quer ir?
         </h1>
 
         <section className="mt-4 rounded-[24px] bg-white p-4 shadow-card">
@@ -346,9 +370,10 @@ export function RotasView() {
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
             />
             <input
+              ref={buscaInputRef}
               value={busca}
               onChange={(evento) => setBusca(evento.target.value)}
-              placeholder={`Buscar endereco da ${campoAtivo}`}
+              placeholder={`Buscar endereço da ${campoAtivo}`}
               className="min-h-11 w-full rounded-2xl border border-slate-200 bg-slate-50 pl-10 pr-4 text-sm font-medium text-slate-700 outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20"
             />
             {buscando && (
@@ -409,7 +434,7 @@ export function RotasView() {
               className="inline-flex min-h-10 items-center gap-2 rounded-full border border-slate-200 bg-white px-3 text-xs font-bold text-brand-primary transition hover:bg-slate-50"
             >
               <Crosshair size={15} />
-              Minha localizacao
+              Minha localização
             </button>
           </div>
 
@@ -444,8 +469,8 @@ export function RotasView() {
           <section className="mt-4 rounded-[24px] border border-dashed border-amber-300 bg-amber-50 p-4 text-amber-700">
             <p className="text-sm font-bold">Nenhuma rota encontrada.</p>
             <p className="mt-1 text-xs font-medium">
-              Ainda nao ha linhas mapeadas ligando esses pontos. A cobertura e
-              maior na area de Florianopolis.
+              Ainda não há linhas mapeadas ligando esses pontos. A cobertura é
+              maior na área de Florianópolis.
             </p>
           </section>
         )}
@@ -468,7 +493,7 @@ export function RotasView() {
                     {itinerario.duracaoMin} min
                   </span>
                   <span className="block text-[11px] font-semibold opacity-80">
-                    {itinerario.tipo === "direta" ? "Direto" : "1 baldeacao"}
+                    {itinerario.tipo === "direta" ? "Direto" : "1 baldeação"}
                   </span>
                 </button>
               ))}
@@ -481,7 +506,7 @@ export function RotasView() {
             />
 
             <p className="text-center text-[11px] font-medium text-slate-400">
-              Horarios estimados por frequencia. Pontos e linhas: OpenStreetMap.
+              Horários estimados por frequência. Pontos e linhas: OpenStreetMap.
             </p>
           </section>
         )}
@@ -535,7 +560,7 @@ function ItinerarioDetalhe({
             {itinerario.horarioPartida} - {itinerario.horarioChegada}
           </p>
           <p className="text-xs font-semibold text-slate-400">
-            {itinerario.duracaoMin} min - {itinerario.distanciaAPeM} m a pe
+            {itinerario.duracaoMin} min - {itinerario.distanciaAPeM} m a pé
           </p>
         </div>
         <div className="flex items-center gap-1 rounded-full bg-green-50 px-3 py-1.5 text-green-700">
@@ -587,7 +612,7 @@ function ItinerarioDetalhe({
               ) : (
                 <>
                   <p className="text-sm font-bold text-slate-800">
-                    A pe ate {etapa.para}
+                    A pé até {etapa.para}
                   </p>
                   <p className="text-xs font-medium text-slate-500">
                     {caminhadas[`${prefixo}-${indice}`]?.distanciaM ??
