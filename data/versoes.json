@@ -165,5 +165,14 @@
       "Fontes escuras da pagina de recarga harmonizadas com o azul usado na tela inicial.",
       "Titulos Informacoes e Historico reposicionados acima dos componentes, seguindo o padrao da tela inicial."
     ]
+  },
+  {
+    "versao": "MVP v0.0.20",
+    "data": "2026-06-25",
+    "alteracoes": [
+      "Componente Gerar extrato movido para depois dos demais componentes da pagina de recarga.",
+      "Titulo externo Informacoes renomeado para Dados do cartao.",
+      "Titulo interno do card de dados do cartao removido."
+    ]
   }
 ]

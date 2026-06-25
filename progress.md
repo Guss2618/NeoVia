@@ -181,3 +181,13 @@
 - Versao do sistema atualizada para MVP v0.0.19 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
 - Build de producao validado com `npm run build` apos os ajustes finais na pagina de recarga.
 - Rotas locais `/recarga`, `/versoes` e `/inicio` validadas com status 200.
+
+## MVP v0.0.20
+
+- Iniciada a reorganizacao da pagina `/recarga` para mover `Gerar extrato` ao final e simplificar o card de dados do cartao.
+- Componente `Gerar extrato` movido para depois do historico na pagina `/recarga`.
+- Titulo externo `Informacoes` renomeado para `Dados do cartao`.
+- Titulo interno e icone do card de dados do cartao removidos para evitar duplicidade visual.
+- Versao do sistema atualizada para MVP v0.0.20 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
+- Build de producao validado com `npm run build` apos a reorganizacao da pagina de recarga.
+- Rotas locais `/recarga`, `/versoes` e `/inicio` validadas com status 200.

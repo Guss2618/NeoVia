@@ -10,7 +10,6 @@ import {
   FileText,
   Loader2,
   Plus,
-  UserRound,
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -71,7 +70,7 @@ export default function RecargaPage() {
       <section className="mx-auto w-full max-w-4xl">
         <AppTopBar
           className="-mx-5 sm:-mx-8 sm:px-8"
-          version="MVP v0.0.19"
+          version="MVP v0.0.20"
         />
 
         {!cardData ? (
@@ -146,22 +145,11 @@ export default function RecargaPage() {
               <div className="grid content-start gap-5">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
-                    Informações
+                    Dados do cartão
                   </p>
 
                   <section className="mt-2 rounded-[26px] border border-slate-200 bg-white p-5 shadow-sm">
-                  <div className="flex items-center justify-between gap-4">
-                    <div>
-                      <h2 className="mt-1 text-xl font-black tracking-[-0.04em]">
-                        Dados do cartão
-                      </h2>
-                    </div>
-                    <div className="grid size-11 place-items-center rounded-xl bg-brand-primary/10 text-brand-primary">
-                      <UserRound size={22} />
-                    </div>
-                  </div>
-
-                  <dl className="mt-5 grid grid-cols-2 gap-3">
+                  <dl className="grid grid-cols-2 gap-3">
                     <div className="rounded-2xl bg-slate-50 p-3">
                       <dt className="text-[10px] font-bold uppercase tracking-wide text-brand-primary/45">
                         Categoria
@@ -199,25 +187,6 @@ export default function RecargaPage() {
                   </section>
                 </div>
 
-                <button
-                  type="button"
-                  className="flex min-h-14 w-full items-center justify-between gap-4 rounded-[22px] border border-slate-200 bg-white px-4 py-3 text-left shadow-sm transition hover:border-brand-primary/30 hover:bg-brand-primary/5 focus:outline-none focus:ring-2 focus:ring-brand-primary/30"
-                >
-                  <span className="flex items-center gap-3">
-                    <span className="grid size-11 place-items-center rounded-xl bg-brand-primary/10 text-brand-primary">
-                      <FileText size={22} />
-                    </span>
-                    <span>
-                      <span className="block text-sm font-black">
-                        Gerar extrato
-                      </span>
-                      <span className="block text-xs font-semibold text-brand-primary/65">
-                        Consulte todas as movimentações
-                      </span>
-                    </span>
-                  </span>
-                  <ArrowRight className="shrink-0 text-brand-primary" size={20} />
-                </button>
               </div>
             </div>
 
@@ -276,6 +245,26 @@ export default function RecargaPage() {
                 })}
               </div>
             </section>
+
+            <button
+              type="button"
+              className="mt-5 flex min-h-14 w-full items-center justify-between gap-4 rounded-[22px] border border-slate-200 bg-white px-4 py-3 text-left shadow-sm transition hover:border-brand-primary/30 hover:bg-brand-primary/5 focus:outline-none focus:ring-2 focus:ring-brand-primary/30"
+            >
+              <span className="flex items-center gap-3">
+                <span className="grid size-11 place-items-center rounded-xl bg-brand-primary/10 text-brand-primary">
+                  <FileText size={22} />
+                </span>
+                <span>
+                  <span className="block text-sm font-black">
+                    Gerar extrato
+                  </span>
+                  <span className="block text-xs font-semibold text-brand-primary/65">
+                    Consulte todas as movimentações
+                  </span>
+                </span>
+              </span>
+              <ArrowRight className="shrink-0 text-brand-primary" size={20} />
+            </button>
           </>
         )}
       </section>
