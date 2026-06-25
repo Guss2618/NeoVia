@@ -17,7 +17,6 @@ import {
 import Link from "next/link";
 import type { ChangeEvent } from "react";
 import { useEffect, useMemo, useState } from "react";
-import { AppTopBar } from "../../../components/AppTopBar";
 
 type CardInfo = {
   balance: number;
@@ -117,14 +116,9 @@ export default function PagamentoRecargaPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f4f8fc] px-4 pb-5 text-slate-950 sm:px-8">
+    <main className="min-h-screen bg-[#f4f8fc] px-4 pb-28 pt-3 text-[hsl(228.51deg_100%_19.94%)] sm:px-8">
       <section className="mx-auto w-full max-w-5xl">
-        <AppTopBar
-          className="-mx-4 sm:-mx-8 sm:px-8"
-          version="MVP v0.0.16"
-        />
-
-        <header className="mt-2 flex items-center gap-3">
+        <header className="flex items-center gap-3">
           <Link
             href="/recarga"
             aria-label="Voltar para o cartão"
@@ -136,7 +130,7 @@ export default function PagamentoRecargaPage() {
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
               Recarga
             </p>
-            <h1 className="truncate text-2xl font-black tracking-[-0.06em]">
+            <h1 className="truncate text-2xl font-black tracking-[-0.06em] text-[hsl(228.51deg_100%_19.94%)]">
               Pagamento
             </h1>
           </div>
@@ -150,7 +144,7 @@ export default function PagamentoRecargaPage() {
                 size={30}
                 strokeWidth={2.5}
               />
-              <p className="text-sm font-black text-slate-600">
+              <p className="text-sm font-black text-brand-primary">
                 Carregando recarga
               </p>
             </div>
@@ -202,7 +196,7 @@ export default function PagamentoRecargaPage() {
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
                     Valor
                   </p>
-                  <h2 className="mt-0.5 text-lg font-black tracking-[-0.04em]">
+                  <h2 className="mt-0.5 text-lg font-black tracking-[-0.04em] text-[hsl(228.51deg_100%_19.94%)]">
                     Escolha o valor
                   </h2>
                 </div>
@@ -224,7 +218,7 @@ export default function PagamentoRecargaPage() {
                       className={`relative h-11 rounded-2xl border px-2 text-sm font-black transition focus:outline-none focus:ring-2 focus:ring-brand-primary/30 ${
                         isSelected
                           ? "border-brand-primary bg-brand-primary text-white"
-                          : "border-slate-200 bg-slate-50 text-slate-800 hover:border-brand-primary/30"
+                          : "border-slate-200 bg-slate-50 text-[hsl(228.51deg_100%_19.94%)] hover:border-brand-primary/30"
                       }`}
                     >
                       {formatCurrency(amount).replace(/\s/g, "")}
@@ -248,7 +242,7 @@ export default function PagamentoRecargaPage() {
                   value={customAmount}
                   onChange={handleCustomAmountChange}
                   placeholder="Inserir outro valor"
-                  className="h-9 min-w-0 flex-1 bg-transparent text-base font-black text-slate-900 outline-none placeholder:text-sm placeholder:font-semibold placeholder:text-slate-400"
+                  className="h-9 min-w-0 flex-1 bg-transparent text-base font-black text-[hsl(228.51deg_100%_19.94%)] outline-none placeholder:text-sm placeholder:font-semibold placeholder:text-brand-primary/45"
                 />
               </label>
             </section>
@@ -259,7 +253,7 @@ export default function PagamentoRecargaPage() {
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
                     Pagamento
                   </p>
-                  <h2 className="mt-0.5 text-lg font-black tracking-[-0.04em]">
+                  <h2 className="mt-0.5 text-lg font-black tracking-[-0.04em] text-[hsl(228.51deg_100%_19.94%)]">
                     Método de pagamento
                   </h2>
                 </div>
@@ -306,7 +300,7 @@ export default function PagamentoRecargaPage() {
                             />
                           ) : null}
                         </span>
-                        <span className="block truncate text-[11px] font-semibold text-slate-500">
+                        <span className="block truncate text-[11px] font-semibold text-brand-primary/65">
                           {method.feeLabel} • {method.availability}
                         </span>
                       </span>

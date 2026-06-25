@@ -135,5 +135,14 @@
       "Botao Realizar recarga da area do cartao e atalho da tela inicial apontam para a nova pagina de pagamento.",
       "Menu inferior ocultado na pagina de pagamento para priorizar a visualizacao dos componentes sem rolagem."
     ]
+  },
+  {
+    "versao": "MVP v0.0.17",
+    "data": "2026-06-25",
+    "alteracoes": [
+      "Menu inferior mantido na pagina de pagamento de recarga.",
+      "Menu superior com logo, notificacoes e perfil removido da pagina de pagamento.",
+      "Textos escuros da pagina de pagamento atualizados para os tons azuis usados na tela inicial."
+    ]
   }
 ]

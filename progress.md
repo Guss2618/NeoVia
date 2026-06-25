@@ -140,3 +140,13 @@
 - Versao do sistema atualizada para MVP v0.0.16 em `agents.md`, tela inicial, paginas de recarga e historico de versoes.
 - Build de producao validado com `npm run build` apos a separacao do fluxo de pagamento.
 - Rotas locais `/recarga`, `/recarga/pagamento` e `/api/cartao` validadas com status 200.
+
+## MVP v0.0.17
+
+- Iniciada a revisao visual da pagina `/recarga/pagamento` para manter o menu inferior, remover o menu superior e alinhar as cores dos textos com os azuis da tela inicial.
+- Menu inferior restaurado na pagina `/recarga/pagamento` removendo a excecao em `BottomNav`.
+- Menu superior com logo, notificacoes e perfil removido da pagina `/recarga/pagamento`.
+- Textos escuros da pagina de pagamento substituidos por `brand-primary` e pelo azul escuro usado nos nomes das rotas favoritas da tela inicial.
+- Versao do sistema atualizada para MVP v0.0.17 em `agents.md`, tela inicial, pagina de cartao e historico de versoes.
+- Build de producao validado com `npm run build` apos os ajustes visuais da pagina de pagamento.
+- Rotas locais `/recarga/pagamento`, `/recarga` e `/versoes` validadas com status 200.
