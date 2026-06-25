@@ -191,3 +191,22 @@
 - Versao do sistema atualizada para MVP v0.0.20 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
 - Build de producao validado com `npm run build` apos a reorganizacao da pagina de recarga.
 - Rotas locais `/recarga`, `/versoes` e `/inicio` validadas com status 200.
+
+## MVP v0.0.21
+
+- Iniciada a remocao dos titulos internos dos componentes de historico e extrato da pagina `/recarga`.
+- Titulo interno `Movimentacoes recentes` removido do componente de historico, mantendo apenas o titulo externo `Historico`.
+- Titulo externo `Gerar extrato` adicionado acima do componente no mesmo formato dos demais titulos da pagina `/recarga`.
+- Titulo interno `Gerar extrato` removido do botao de extrato, mantendo a descricao e o icone.
+- Versao do sistema atualizada para MVP v0.0.21 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
+
+## MVP v0.0.22
+
+- Iniciada a criacao de uma tela de carregamento ao clicar em `Comecar` na pagina default `/`.
+- Tela de carregamento criada com a marca NeoVIa usada no menu superior compartilhado.
+- Botao `Comecar` da pagina default atualizado para exibir a tela de carregamento antes de navegar para `/inicio`.
+- Menu inferior/lateral removido da pagina `/versoes`.
+- Deslocamento lateral de conteudo removido da pagina `/versoes` em telas maiores.
+- Versao do sistema atualizada para MVP v0.0.22 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
+- Build de producao validado com `npm run build` apos os ajustes de carregamento, historico, extrato e menu de versoes.
+- Rotas locais `/`, `/versoes`, `/recarga` e `/inicio` validadas com status 200.

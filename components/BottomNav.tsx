@@ -30,7 +30,7 @@ const items = [
 export function BottomNav() {
   const pathname = usePathname();
 
-  if (pathname === "/") {
+  if (pathname === "/" || pathname === "/versoes") {
     return null;
   }
 

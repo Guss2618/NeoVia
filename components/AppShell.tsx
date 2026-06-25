@@ -6,9 +6,7 @@ import { usePathname } from "next/navigation";
 export function AppShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
 
-  return (
-    <div className={pathname === "/" ? undefined : "md:pl-24"}>
-      {children}
-    </div>
-  );
+  const hasNavigation = pathname !== "/" && pathname !== "/versoes";
+
+  return <div className={hasNavigation ? "md:pl-24" : undefined}>{children}</div>;
 }

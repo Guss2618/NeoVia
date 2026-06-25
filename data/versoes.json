@@ -174,5 +174,22 @@
       "Titulo externo Informacoes renomeado para Dados do cartao.",
       "Titulo interno do card de dados do cartao removido."
     ]
+  },
+  {
+    "versao": "MVP v0.0.21",
+    "data": "2026-06-25",
+    "alteracoes": [
+      "Titulo interno Movimentacoes recentes removido do componente de historico.",
+      "Componente Gerar extrato atualizado com titulo externo e conteudo interno simplificado."
+    ]
+  },
+  {
+    "versao": "MVP v0.0.22",
+    "data": "2026-06-25",
+    "alteracoes": [
+      "Tela de carregamento com a marca NeoVIa adicionada ao clicar em Comecar na pagina inicial default.",
+      "Menu inferior e lateral removido da pagina de historico de versoes.",
+      "Deslocamento lateral removido da pagina de historico de versoes no desktop."
+    ]
   }
 ]

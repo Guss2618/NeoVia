@@ -70,7 +70,7 @@ export default function RecargaPage() {
       <section className="mx-auto w-full max-w-4xl">
         <AppTopBar
           className="-mx-5 sm:-mx-8 sm:px-8"
-          version="MVP v0.0.20"
+          version="MVP v0.0.22"
         />
 
         {!cardData ? (
@@ -195,15 +195,7 @@ export default function RecargaPage() {
             </p>
 
             <section className="mt-2 rounded-[26px] border border-slate-200 bg-white p-5 shadow-sm">
-              <div className="flex items-end justify-between gap-4">
-                <div>
-                  <h2 className="mt-1 text-xl font-black tracking-[-0.04em]">
-                    Movimentações recentes
-                  </h2>
-                </div>
-              </div>
-
-              <div className="mt-4 divide-y divide-slate-100">
+              <div className="divide-y divide-slate-100">
                 {cardData.recentTransactions.map((transaction) => {
                   const isCredit = transaction.type === "credit";
                   const TransactionIcon = isCredit
@@ -246,19 +238,21 @@ export default function RecargaPage() {
               </div>
             </section>
 
+            <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
+              Gerar extrato
+            </p>
+
             <button
               type="button"
-              className="mt-5 flex min-h-14 w-full items-center justify-between gap-4 rounded-[22px] border border-slate-200 bg-white px-4 py-3 text-left shadow-sm transition hover:border-brand-primary/30 hover:bg-brand-primary/5 focus:outline-none focus:ring-2 focus:ring-brand-primary/30"
+              aria-label="Gerar extrato"
+              className="mt-2 flex min-h-14 w-full items-center justify-between gap-4 rounded-[22px] border border-slate-200 bg-white px-4 py-3 text-left shadow-sm transition hover:border-brand-primary/30 hover:bg-brand-primary/5 focus:outline-none focus:ring-2 focus:ring-brand-primary/30"
             >
               <span className="flex items-center gap-3">
                 <span className="grid size-11 place-items-center rounded-xl bg-brand-primary/10 text-brand-primary">
                   <FileText size={22} />
                 </span>
                 <span>
-                  <span className="block text-sm font-black">
-                    Gerar extrato
-                  </span>
-                  <span className="block text-xs font-semibold text-brand-primary/65">
+                  <span className="block text-sm font-semibold text-brand-primary/65">
                     Consulte todas as movimentações
                   </span>
                 </span>

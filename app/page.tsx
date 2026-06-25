@@ -7,6 +7,7 @@ import {
   Route,
 } from "lucide-react";
 import Link from "next/link";
+import { StartLoadingLink } from "../components/StartLoadingLink";
 
 const features = [
   {
@@ -46,7 +47,7 @@ export default function Home() {
             href="/versoes"
             className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white/80 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/80"
           >
-            MVP v0.0.20
+            MVP v0.0.22
           </Link>
         </header>
 
@@ -65,13 +66,13 @@ export default function Home() {
               PC.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
+              <StartLoadingLink
                 href="/inicio"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-base font-black text-brand-primary shadow-card transition hover:-translate-y-0.5 hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/80"
               >
                 Começar
                 <ArrowRight size={20} />
-              </Link>
+              </StartLoadingLink>
               <Link
                 href="/versoes"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 px-6 py-3 text-base font-bold text-white/80 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/80"
