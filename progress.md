@@ -129,3 +129,14 @@
 - Versao do sistema atualizada para MVP v0.0.15 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
 - Build de producao validado com `npm run build` apos a criacao da pagina de recarga.
 - Rotas locais `/recarga` e `/versoes` validadas com status 200; API local `/api/cartao` validada com dados de saldo, valores e metodos de pagamento.
+
+## MVP v0.0.16
+
+- Iniciada a separacao da pagina de cartao e da pagina especifica de recarga e pagamento.
+- Pagina `/recarga/pagamento` criada com os componentes de proxima recarga, escolha de valor, input de valor personalizado e metodo de pagamento.
+- Pagina `/recarga` voltou a funcionar como area do cartao, com botao `Realizar recarga` redirecionando para `/recarga/pagamento`.
+- Atalho de recarga da tela inicial atualizado para apontar para `/recarga/pagamento`.
+- Menu inferior ocultado apenas no fluxo `/recarga/pagamento` para aumentar a area util da tela e reduzir a necessidade de rolagem.
+- Versao do sistema atualizada para MVP v0.0.16 em `agents.md`, tela inicial, paginas de recarga e historico de versoes.
+- Build de producao validado com `npm run build` apos a separacao do fluxo de pagamento.
+- Rotas locais `/recarga`, `/recarga/pagamento` e `/api/cartao` validadas com status 200.

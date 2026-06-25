@@ -21,7 +21,7 @@ export default function InicioPage() {
   return (
     <main className="min-h-screen bg-[#f4f8fc] px-5 pb-24 text-slate-950">
       <section className="mx-auto w-full max-w-md">
-        <AppTopBar className="-mx-5" version="MVP v0.0.15" />
+        <AppTopBar className="-mx-5" version="MVP v0.0.16" />
 
         <label className="mt-6 flex h-12 items-center gap-3 rounded-[20px] border border-slate-200 bg-white px-4 shadow-sm focus-within:ring-2 focus-within:ring-brand-primary/25">
           <Search className="text-brand-primary" size={20} />
@@ -87,7 +87,7 @@ export default function InicioPage() {
             R$ 42,80
           </strong>
           <Link
-            href="/recarga"
+            href="/recarga/pagamento"
             className="mt-3 flex h-10 items-center justify-center gap-2 rounded-2xl bg-white/10 px-3 py-2 text-sm font-bold text-white/80 transition hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/70"
           >
             <Plus size={17} strokeWidth={3} />

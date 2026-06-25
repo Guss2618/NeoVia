@@ -30,6 +30,10 @@ const items = [
 export function BottomNav() {
   const pathname = usePathname();
 
+  if (pathname.startsWith("/recarga/pagamento")) {
+    return null;
+  }
+
   return (
     <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-slate-200 bg-white/95 px-4 pb-4 pt-3 shadow-[0_-12px_36px_rgba(15,63,116,0.12)] backdrop-blur">
       <div className="mx-auto grid max-w-md grid-cols-4 gap-2">

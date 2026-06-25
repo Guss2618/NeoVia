@@ -125,5 +125,15 @@
       "Pagina de recarga do cartao criada com saldo atual, valores predefinidos de deposito e metodos de pagamento.",
       "Dados da recarga movidos para JSON local consumido pela API Route /api/cartao."
     ]
+  },
+  {
+    "versao": "MVP v0.0.16",
+    "data": "2026-06-25",
+    "alteracoes": [
+      "Criada pagina especifica /recarga/pagamento para escolha de valor e metodo de pagamento.",
+      "Adicionado input de valor personalizado no fluxo de recarga.",
+      "Botao Realizar recarga da area do cartao e atalho da tela inicial apontam para a nova pagina de pagamento.",
+      "Menu inferior ocultado na pagina de pagamento para priorizar a visualizacao dos componentes sem rolagem."
+    ]
   }
 ]
