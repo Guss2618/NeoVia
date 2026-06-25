@@ -156,5 +156,14 @@
       "Tela inicial adaptada para desktop com largura ampliada e organizacao em colunas.",
       "Menu inferior passa a funcionar como menu lateral esquerdo em telas maiores, mantendo o rodape no mobile."
     ]
+  },
+  {
+    "versao": "MVP v0.0.19",
+    "data": "2026-06-25",
+    "alteracoes": [
+      "Cabecalho secundario da pagina de recarga removido.",
+      "Fontes escuras da pagina de recarga harmonizadas com o azul usado na tela inicial.",
+      "Titulos Informacoes e Historico reposicionados acima dos componentes, seguindo o padrao da tela inicial."
+    ]
   }
 ]

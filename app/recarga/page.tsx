@@ -2,7 +2,6 @@
 
 import {
   ArrowDownLeft,
-  ArrowLeft,
   ArrowRight,
   ArrowUpRight,
   CalendarClock,
@@ -68,30 +67,12 @@ export default function RecargaPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#f4f8fc] px-5 pb-28 text-slate-950 sm:px-8">
+    <main className="min-h-screen bg-[#f4f8fc] px-5 pb-28 text-[hsl(228.51deg_100%_19.94%)] sm:px-8">
       <section className="mx-auto w-full max-w-4xl">
         <AppTopBar
           className="-mx-5 sm:-mx-8 sm:px-8"
-          version="MVP v0.0.18"
+          version="MVP v0.0.19"
         />
-
-        <header className="mt-5 flex items-center gap-4">
-          <Link
-            href="/inicio"
-            aria-label="Voltar para o início"
-            className="grid size-11 shrink-0 place-items-center rounded-full border border-slate-200 bg-white text-brand-primary shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-primary/30"
-          >
-            <ArrowLeft size={20} />
-          </Link>
-          <div>
-            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
-              Meu passe
-            </p>
-            <h1 className="text-3xl font-black tracking-[-0.06em]">
-              Meu cartão
-            </h1>
-          </div>
-        </header>
 
         {!cardData ? (
           <section className="mt-6 flex min-h-[420px] items-center justify-center rounded-[26px] border border-slate-200 bg-white p-6 shadow-sm">
@@ -101,7 +82,7 @@ export default function RecargaPage() {
                 size={30}
                 strokeWidth={2.5}
               />
-              <p className="text-sm font-black text-slate-600">
+              <p className="text-sm font-black text-brand-primary">
                 Carregando cartão
               </p>
             </div>
@@ -163,12 +144,14 @@ export default function RecargaPage() {
               </div>
 
               <div className="grid content-start gap-5">
-                <section className="rounded-[26px] border border-slate-200 bg-white p-5 shadow-sm">
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
+                    Informações
+                  </p>
+
+                  <section className="mt-2 rounded-[26px] border border-slate-200 bg-white p-5 shadow-sm">
                   <div className="flex items-center justify-between gap-4">
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
-                        Informações
-                      </p>
                       <h2 className="mt-1 text-xl font-black tracking-[-0.04em]">
                         Dados do cartão
                       </h2>
@@ -180,7 +163,7 @@ export default function RecargaPage() {
 
                   <dl className="mt-5 grid grid-cols-2 gap-3">
                     <div className="rounded-2xl bg-slate-50 p-3">
-                      <dt className="text-[10px] font-bold uppercase tracking-wide text-slate-400">
+                      <dt className="text-[10px] font-bold uppercase tracking-wide text-brand-primary/45">
                         Categoria
                       </dt>
                       <dd className="mt-1 text-sm font-black">
@@ -188,7 +171,7 @@ export default function RecargaPage() {
                       </dd>
                     </div>
                     <div className="rounded-2xl bg-slate-50 p-3">
-                      <dt className="text-[10px] font-bold uppercase tracking-wide text-slate-400">
+                      <dt className="text-[10px] font-bold uppercase tracking-wide text-brand-primary/45">
                         Validade
                       </dt>
                       <dd className="mt-1 text-sm font-black">
@@ -205,7 +188,7 @@ export default function RecargaPage() {
                       </dd>
                     </div>
                     <div className="rounded-2xl bg-slate-50 p-3">
-                      <dt className="text-[10px] font-bold uppercase tracking-wide text-slate-400">
+                      <dt className="text-[10px] font-bold uppercase tracking-wide text-brand-primary/45">
                         Final
                       </dt>
                       <dd className="mt-1 text-sm font-black">
@@ -213,7 +196,8 @@ export default function RecargaPage() {
                       </dd>
                     </div>
                   </dl>
-                </section>
+                  </section>
+                </div>
 
                 <button
                   type="button"
@@ -227,7 +211,7 @@ export default function RecargaPage() {
                       <span className="block text-sm font-black">
                         Gerar extrato
                       </span>
-                      <span className="block text-xs font-semibold text-slate-500">
+                      <span className="block text-xs font-semibold text-brand-primary/65">
                         Consulte todas as movimentações
                       </span>
                     </span>
@@ -237,12 +221,13 @@ export default function RecargaPage() {
               </div>
             </div>
 
-            <section className="mt-5 rounded-[26px] border border-slate-200 bg-white p-5 shadow-sm">
+            <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
+              Histórico
+            </p>
+
+            <section className="mt-2 rounded-[26px] border border-slate-200 bg-white p-5 shadow-sm">
               <div className="flex items-end justify-between gap-4">
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">
-                    Histórico
-                  </p>
                   <h2 className="mt-1 text-xl font-black tracking-[-0.04em]">
                     Movimentações recentes
                   </h2>
@@ -274,13 +259,13 @@ export default function RecargaPage() {
                         <h3 className="truncate text-sm font-black">
                           {transaction.title}
                         </h3>
-                        <p className="mt-0.5 text-xs font-semibold text-slate-500">
+                        <p className="mt-0.5 text-xs font-semibold text-brand-primary/65">
                           {transaction.date}
                         </p>
                       </div>
                       <strong
                         className={`shrink-0 text-sm font-black ${
-                          isCredit ? "text-emerald-700" : "text-slate-900"
+                          isCredit ? "text-emerald-700" : "text-[hsl(228.51deg_100%_19.94%)]"
                         }`}
                       >
                         {isCredit ? "+" : "-"}{" "}

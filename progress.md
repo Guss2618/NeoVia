@@ -171,3 +171,13 @@
 - Menu inferior convertido em menu lateral esquerdo a partir de telas `md`, mantendo o rodape atual no mobile.
 - Build de producao validado com `npm run build` apos os ajustes de responsividade.
 - Rotas locais `/`, `/inicio`, `/recarga` e `/versoes` validadas com status 200.
+
+## MVP v0.0.19
+
+- Iniciada a remocao do cabecalho secundario da pagina `/recarga` e harmonizacao das fontes escuras com o azul da tela inicial.
+- Cabecalho secundario com link de voltar e titulo `Meu cartao` removido da pagina `/recarga`.
+- Fontes escuras da pagina `/recarga` substituidas pela cor azul usada na tela inicial, mantendo branco no card principal e verde nos estados positivos.
+- Titulos `Informacoes` e `Historico` reposicionados acima dos componentes da pagina `/recarga`, seguindo o padrao visual da tela inicial.
+- Versao do sistema atualizada para MVP v0.0.19 em `agents.md`, tela inicial, pagina de recarga e historico de versoes.
+- Build de producao validado com `npm run build` apos os ajustes finais na pagina de recarga.
+- Rotas locais `/recarga`, `/versoes` e `/inicio` validadas com status 200.
