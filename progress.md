@@ -167,3 +167,7 @@
 - Historico de versoes atualizado com a remocao do menu inferior na tela default.
 - Build de producao validado com `npm run build` apos a remocao do menu inferior da tela default.
 - Rotas locais `/` e `/inicio` validadas: `/` sem menu inferior e sem deslocamento lateral; `/inicio` mantendo a navegacao.
+- Tela `/inicio` adaptada para desktop com largura ampliada, busca mais larga e rotas/cartao organizados em colunas.
+- Menu inferior convertido em menu lateral esquerdo a partir de telas `md`, mantendo o rodape atual no mobile.
+- Build de producao validado com `npm run build` apos os ajustes de responsividade.
+- Rotas locais `/`, `/inicio`, `/recarga` e `/versoes` validadas com status 200.
